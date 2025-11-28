@@ -1,0 +1,182 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" lang="ru" content="Аутсорсинг полевого персонала от Staff Point — подбор, оформление и сопровождение мерчандайзеров, аудиторов, торговых представителей по всей России. Мы берём на себя HR и документооборот, а вы управляете командой.">
+    <meta name="keywords" content="аутсорсинг персонала, аутстаффинг мерчандайзеров, аутсорсинг торгового персонала, подбор полевых сотрудников, Staff Point, мерчандайзинг персонал">
+    <title>Аутсорсинг персонала {{ region.insert if region }} — Staff Point</title>
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="container">
+        <div class="hero-title">
+            <h1>
+                <b>Staff P<span class="accent-color">o</span>int<br/></b>
+                Аутсорсинг и аутстаффинг персонала<br/>
+                {{ region.insert if region }}
+            </h1>
+        </div>
+        <div class="hero-txt">
+            <p>
+                Мы <b>более 20 лет создаем успешные команды по мерчандайзингу</b>, мониторингу и аудиту.
+                Если вы задумываетесь о собственных полевых сотрудниках, но не хотите тратить ресурсы на их подбор, оформление и сопровождение — мы возьмем это все на себя.
+            </p>
+            <p><b>Вы управляете — мы предоставляем стабильную команду  и ведение КДП.</b></p>
+            <p>
+                Staff Point подбирает и оформляет персонал под ваши задачи, а контроль, постановка задач и управление остаются
+                полностью на вашей стороне. Это оптимальное решение для компаний, которым важно качество и прозрачность
+                процессов без лишних затрат.
+            </p>
+        </div>
+    </div>
+    <div class="hero-video-dimmer"></div>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/static/background.mp4" type="video/mp4">
+    </video>
+</div>
+
+<section class="adv-icons">
+    <div class="container">
+        <h2>Мы знаем об аустаффинге все!</h2>
+        <div class="section-subtitle">До того, как мы <b>подберем</b> для Вас <b>подходящую программу по аутстаффингу</b>, Мы <b>ответим на</b> Ваши самые <b>главные вопросы</b></div>
+        <ul class="adv-icons-list">
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_cash.png" alt="" title="">
+                <div class="adv-icons-txt">Как существенно сократить расходы на содержание собственной полевой команды, не уменьшая количество персонала.</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_guys.png" alt="" title="">
+                <div class="adv-icons-txt">Как создать свою собственную полноценную команду, минимизировать бюджет, но сохранить полный контроль и управление людьми и полностью влиять на свои продажи.</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_4hands.png" alt="" title="">
+                <div class="adv-icons-txt">Как забыть про постоянную ротацию персонала, нехватку сотрудников, проблемы с поиском и отбором, пустующие торговые точки и провалы с продажами. </div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_map.png" alt="" title="">
+                <div class="adv-icons-txt">Как определить оптимальную ЗП полевых сотрудников, исходя из региональной специфики.</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_guy_hand.png" alt="" title="">
+                <div class="adv-icons-txt">Поможем разобраться и вместе оценим - какой персонал вам нужен. Мерчендайзер или все же продавец-консультант</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_route.png" alt="" title="">
+                <div class="adv-icons-txt">Как составить оптимальные маршруты для исполнителей, если проект предусматривает визитное посещение нескольких магазинов.</div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="service-comp medium-bg">
+    <div class="container">
+        <h2>Что входит в аутсорсинг персонала {{ region.insert if region }}</h2>
+        <div class="section-subtitle">
+            Мы <b>берем на себя все:</b> HR-процессы, оформление и сопровождение полевых сотрудников
+        </div>
+        <div class="service-comp-wrap">
+            <ul class="service-comp-list">
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Оформление и юридическое сопровождение</h4>
+                    <div class="service-comp-txt">
+                        Мы подскажем и вместе с Вами подберем для Вас оптимальную форму оформления сотрудников. Возьмем на себя
+                        весь кадровый учет, договоры, налоги, выплаты и отчетность.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Заработная плата</h4>
+                    <div class="service-comp-txt">
+                        Поможем определить региональные ставки по ЗП мерчандайзеров, определимся с возможными KPi для
+                        различных торговых сетей.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Персонал и обучение</h4>
+                    <div class="service-comp-txt">
+                        Подберем кандидатов и проведем все необходимые этапы собеседований за вас, отсеем неподходящих людей и
+                        предоставим лучшее. Проведем инструктажи, обучим стандартам бренда и правилам работы в торговых точках.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Экономия Вашего бюджета</h4>
+                    <div class="service-comp-txt">
+                        Поможем найти подработчиков в гипермаркетах и супермаркетах, сотрудников на НЕ полный рабочий день или
+                        выходные дни.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Предоставим покрытие 90+%</h4>
+                    <div class="service-comp-txt">
+                        Полностью возьмем на себя ротацию полевого персонала, предоставим неограниченные замены сотрудников,
+                        произведем увольнения людей без финансовых потерь Заказчика.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Электронная система отчетности</h4>
+                    <div class="service-comp-txt">
+                        Предоставим иновационную онлайн-платформу для контроля работы персонала, фотоотчетов и статистики по
+                        визитам. Геолокация с привязкой к каждому обслуживаемому магазину и удобный конструктор отчетов.
+                    </div>
+                </li>
+            </ul>
+            <div class="service-comp-img" id="service-comp-img-outsource"></div>
+        </div>
+    </div>
+</section>
+
+<section class="adv">
+    <div class="container">
+        <h2>Почему компании выбирают Staff Point</h2>
+        <ul class="adv-list">
+            <li class="adv-el">
+                <h4 class="adv-title">Профессиональный HR-отдел</h4>
+                <div class="adv-txt">
+                    Опытные рекрутеры, гибкая система отбора, стажировок и тренингов под каждую товарную категорию.
+                </div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Нестандартные системы поиска</h4>
+                <div class="adv-txt">
+                    Собственные тематические каналы и группы в социальных сетях с большим количеством соискателей в разных областях РФ.
+                </div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Профессионализм</h4>
+                <div class="adv-txt">Понимаем огромную разницу между каналами FMCG, beauty и DIY. Разные направления - разный
+                    персонал и индивидуальный подход к товарным категориям.
+                </div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Юридическая чистота</h4>
+                <div class="adv-txt">
+                    Все сотрудники оформлены официально. Полная чистота и прозрачность отношений.  Мы соблюдаем трудовое и
+                    налоговое законодательство.
+                </div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Долгосрочное партнёрство</h4>
+                <div class="adv-txt">
+                    Мы стремимся не просто выполнять поставленные задачи. Создавая прозрачные партнерские отношения с каждым
+                    клиентом, мы обеспечиваем успешный обмен экспертизой и делимся опытом.
+                </div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Опыт 20+ лет</h4>
+                <div class="adv-txt">
+                    Мы 20 лет создаем успешные команды по мерчендайзингу, мониторингу и аудиту!
+                    Выстроили эффективные процессы подбора и управления персоналом во всех регионах России.
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+{% include 'main/_feedback_form.html' %}
+
+
+{% endblock %}

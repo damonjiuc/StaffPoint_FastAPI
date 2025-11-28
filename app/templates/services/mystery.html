@@ -1,0 +1,113 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" lang="ru" content="Программа «Тайный покупатель» от Staff Point. Проверка качества обслуживания, стандартов продаж и работы персонала. Объективная оценка клиентского опыта.">
+    <meta name="keywords" content="тайный покупатель, mystery shopping, проверка персонала, оценка сервиса, аудит обслуживания, контроль стандартов продаж, Staff Point">
+    <title>Тайный покупатель — проверка качества обслуживания | Staff Point</title>
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="container">
+        <div class="hero-title">
+            <h1>
+                <b>Staff P<span class="accent-color">o</span>int<br/></b>
+                Тайный покупатель<br/>
+                {{ region.insert if region }}
+            </h1>
+        </div>
+        <div class="hero-txt">
+            <p>
+                Программа <b>«Тайный покупатель»</b> — это эффективный инструмент для оценки качества обслуживания и соответствия стандартам компании.
+                Мы проверяем, как ваши сотрудники взаимодействуют с клиентами, выполняют стандарты продаж и поддерживают имидж бренда.
+            </p>
+            <p>
+                Аудит проводится с помощью подготовленных агентов, которые под видом покупателей совершают реальные визиты или заказы.
+                Все данные фиксируются и анализируются для формирования объективной картины качества клиентского опыта.
+            </p>
+            <p><b>Результат — понятные выводы и конкретные рекомендации для улучшения сервиса и продаж.</b></p>
+        </div>
+    </div>
+    <div class="hero-video-dimmer"></div>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/static/background.mp4" type="video/mp4">
+    </video>
+</div>
+
+<section class="service-comp first-section">
+    <div class="container">
+        <h2>Что включает услуга «Тайный покупатель» {{ region.insert if region }}</h2>
+        <div class="section-subtitle">
+            Мы <b>оцениваем реальный уровень обслуживания</b> и соблюдение стандартов продаж
+        </div>
+        <div class="service-comp-wrap">
+            <ul class="service-comp-list">
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Разработка сценариев проверок</h4>
+                    <div class="service-comp-txt">Создаем индивидуальные сценарии под особенности вашего бизнеса, включая тип клиента, вопросы, возражения и целевые действия.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Подбор и обучение тайных покупателей</h4>
+                    <div class="service-comp-txt">Отбираем аудиторов, соответствующих профилю вашей целевой аудитории, проводим инструктаж и тестирование перед проверкой.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Проверка стандартов обслуживания</h4>
+                    <div class="service-comp-txt">Оцениваем приветствие, внешний вид, знание продукта, активность продаж и умение работать с возражениями клиентов.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Проверка корпоративных стандартов</h4>
+                    <div class="service-comp-txt">Фиксируем, насколько сотрудники соблюдают внутренние регламенты, правила презентации бренда и коммуникации с клиентами.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Отчёт с фото, видео и комментариями</h4>
+                    <div class="service-comp-txt">Каждый визит сопровождается детальным отчётом: чек-лист, комментарии аудитора и визуальные подтверждения проверки.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Анализ и рекомендации</h4>
+                    <div class="service-comp-txt">После серии проверок вы получаете сводный отчёт с оценкой уровня сервиса и предложениями по его улучшению.</div>
+                </li>
+            </ul>
+            <div class="service-comp-img" id="service-comp-img-mystery"></div>
+        </div>
+    </div>
+</section>
+
+<section class="adv">
+    <div class="container">
+        <h2>Почему выбирают тайного покупателя от Staff Point</h2>
+        <ul class="adv-list">
+            <li class="adv-el">
+                <h4 class="adv-title">Подход</h4>
+                <div class="adv-txt">Понимаем разницу между каналами FMCG, Beauty и DIY. Знаем, что отличает провизора в аптеке от продавца в магазине и консультанта от промоутера.</div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Огромный пул аудиторов</h4>
+                <div class="adv-txt">База подготовленных тайных покупателей по всей России позволяет проводить проверки в любых городах и сетях.</div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Гибкие форматы проверок</h4>
+                <div class="adv-txt">Оффлайн-визиты, онлайн-покупки, звонки в кол-центр или тестирование цифровых каналов — выбираем формат под ваши задачи.</div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Опыт 20+ лет</h4>
+                <div class="adv-txt">Много лет разрабатываем  чек-листы, анкеты и опросники индивидуально под каждого клиента. Определяем  метод тип и метод проверки под Ваш конкретный случай.</div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Оперативная отчетность</h4>
+                <div class="adv-txt">Результаты проверок передаются онлайн — вы можете отслеживать показатели качества сервиса в реальном времени.</div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Эксклюзив</h4>
+                <div class="adv-txt">Умеем задавать провоцирующие вопросы, работать в нестандартных поведенческих ситуациях и детально фиксировать всю информацию в ходе визита.</div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+{% include 'main/_feedback_form.html' %}
+
+{% endblock %}

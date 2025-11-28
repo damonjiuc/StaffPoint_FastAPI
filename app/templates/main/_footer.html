@@ -1,0 +1,68 @@
+{% set sorted_regions = regions.values() | sort(attribute='name') %}
+{% set total = sorted_regions | length %}
+{% set half = (total // 2) + (total % 2) %}
+{% set reg1 = sorted_regions[:half] %}
+{% set reg2 = sorted_regions[half:] %}
+
+<section class="geo">
+    <div class="container">
+        <h2>География присутствия</h2>
+        <div class="footer-map">
+
+            <ul class="footer-map-reg1">
+            {% for r in reg1 %}
+                <li><a href="{{ url_for_service('', r) }}">{{ r.name }}</a></li>
+            {% endfor %}
+            </ul>
+
+            <img class="footer-map-img" src="/static/map.svg" alt="Карта географии присутствия" title="Карта географии присутствия">
+
+            <ul class="footer-map-reg2">
+            {% for r in reg2 %}
+                <li><a href="{{ url_for_service('', r) }}">{{ r.name }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+<div class="container">
+    <div class="footer-top">
+        <div class="footer-left">
+                <h3 class="footer-title">Рекламное агентство Staff Point</h3>
+                <address>
+                    197343, Россия, Санкт-Петербург, Торжковская&nbsp;ул.&nbsp;д.20&nbsp;лит.А<br />
+                    БЦ&nbsp;Торжковский&nbsp;Лофт, офис&nbsp;291
+                </address>
+            </div>
+            <div class="footer-right">
+                <div class="footer-contacts">
+                    <div class="footer-contacts-el">
+                        <span class="footer-contacts-el-title">Отдел продаж:</span>
+                        <span>
+                            <a href="tel:+79215867382">+7&nbsp;(921)&nbsp;586-73-82</a> /
+                            <a href="tel:+79633240394">+7&nbsp;(963)&nbsp;324-03-94</a> /
+                            <a href="tel:+79118400103">+7&nbsp;(911)&nbsp;840-01-03</a>
+                        </span>
+                    </div>
+                    <div class="footer-contacts-el">
+                        <span class="footer-contacts-el-title">Отдел по работе с клиентами:</span>
+                        <a href="tel:+79627084829">+7&nbsp;(962)&nbsp;708-48-29</a>
+                    </div>
+                    <div class="footer-contacts-el">
+                        <span class="footer-contacts-el-title">Офис:</span>
+                        <a href="tel:+78129864784">+7 (812) 986-47-84</a>
+                    </div>
+                    <div class="footer-contacts-el">
+                        <a href="mailto:f.kerov@staffpoint.ru">f.kerov@staffpoint.ru</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copy">
+            <div>Copyright&copy; 2025 StaffPoint.</div>
+        </div>
+    </div>
+</footer>

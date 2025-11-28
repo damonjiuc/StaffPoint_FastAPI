@@ -1,0 +1,108 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" lang="ru" content="Аудит торговых точек и мерчандайзинга от Staff Point. Проверка стандартов выкладки, наличие товара, размещение POSM и контроль работы полевого персонала.">
+    <meta name="keywords" content="аудит торговых точек, аудит мерчандайзинга, проверка выкладки, контроль POSM, фотоотчет, Staff Point, аудит полевого персонала">
+    <title>Аудит торговых точек и мерчандайзинга — Staff Point</title>
+{% endblock %}
+
+
+{% block content %}
+<div class="hero">
+    <div class="container">
+        <div class="hero-title">
+            <h1>
+                <b>Staff P<span class="accent-color">o</span>int<br/></b>
+                Аудит торговых точек и мерчандайзинга<br/>
+                {{ region.insert if region }}
+            </h1>
+        </div>
+        <div class="hero-txt">
+            <p>
+                Наши аудиторы фиксируют несоответствия, выявляют зоны роста и помогают скорректировать действия полевых команд. Это позволяет НАШИМ клиентам оперативно реагировать и повышать эффективность мерчандайзинга по всей стране.
+            </p>
+        </div>
+    </div>
+    <div class="hero-video-dimmer"></div>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/static/background.mp4" type="video/mp4">
+    </video>
+</div>
+
+<section class="service-comp first-section">
+    <div class="container">
+        <h2>Что входит в аудит торговых точек {{ region.insert if region }}</h2>
+        <div class="section-subtitle">
+            Мы <b>контролируем качество</b> представления вашего бренда в торговом пространстве
+        </div>
+        <div class="service-comp-wrap">
+            <ul class="service-comp-list">
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Оценка выкладки и стандартов бренда</h4>
+                    <div class="service-comp-txt">Проверяем расположение товара на полке на соответствие планограмме магазина, корректное размещение ценников и их актуальность.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Видимость</h4>
+                    <div class="service-comp-txt">Определяем количество «фейсингов» каждого SKU и номер полки расположения. Определяем возможности для расширения представленности.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Контроль out of stock</h4>
+                    <div class="service-comp-txt">Фиксируем OOS или угрозу его возникновения. Считаем остатки на полке и на складе, выявляем возможные причины дефицита или перезатаривания.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Проверка POSM и рекламных материалов</h4>
+                    <div class="service-comp-txt">Отслеживаем размещение и состояние рекламных конструкций, промо-материалов и дополнительного оборудования. </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Фотоотчеты и аналитика</h4>
+                    <div class="service-comp-txt">Каждый аудит сопровождается подробным фотоотчетом в нашей технологичной on-line платформе и отметками в чек-листах.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Анализ</h4>
+                    <div class="service-comp-txt">Проводим подробный анализ с выявлением точек роста для Вашего продукта. Предоставляем конкретные предложения по увеличению продаж и расширению представлености Вашего бренда.</div>
+                </li>
+            </ul>
+            <div class="service-comp-img" id="service-comp-img-audit"></div>
+        </div>
+    </div>
+</section>
+
+<section class="adv">
+    <div class="container">
+        <h2>Почему выбирают аудит от Staff Point</h2>
+        <ul class="adv-list">
+            <li class="adv-el">
+                <h4 class="adv-title">Индивидуальный подход</h4>
+                <div class="adv-txt">Разрабатываем чек-листы, анкеты и опросники индивидуально под каждого клиента. Определяем  метод анализа под каждый конкретный случай.</div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Онлайн-отчётность</h4>
+                <div class="adv-txt">Все данные фиксируются и предоставляются клиенту в режиме реального времени через удобную CRM-систему.</div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Скорость</h4>
+                <div class="adv-txt">У нас уже есть профессиональные сотрудники-аудиторы. Оперативно возьмем в работу и быстро предоставим всю необходимую информацию.</div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Мы реально изменим Вашу ситуацию</h4>
+                <div class="adv-txt">Вы получаете не просто отчеты о проблемах и возможностях! Мы дадим  Вам полностью рабочие инструкции и инструменты для увеличения Ваших продаж.</div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Охват</h4>
+                <div class="adv-txt">Проводим аудит магазинов во всех регионах РФ, охватываем федеральные и локальные торговые сети в каждом городе. Знаем разницу между каналами FMCG, Beauty и DIY.</div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Опыт 20+ лет</h4>
+                <div class="adv-txt">Наш многолетний опыт позволяет точно и быстро выявлять проблемы, находить их решения и определять возможные точки роста для Вашего бизнеса.</div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+{% include 'main/_feedback_form.html' %}
+
+{% endblock %}

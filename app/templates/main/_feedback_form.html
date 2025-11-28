@@ -1,0 +1,40 @@
+<section>
+    <div class="container">
+        <form class="form-block" id="feedback-form">
+            <div class="form-form">
+                <div class="form-top">
+                    <h2>Свяжитесь с нами</h2>
+                </div>
+
+                <div class="form-information-block">
+                    <div class="form-inputs-line">
+                        <input class="form-input form-field" type="text" name="name" placeholder="Меня зовут">
+                        <select class="form-select form-field" name="subject">
+                            <option value="" disabled selected>Я хотел бы</option>
+                            <option value="Заказать Мерчандайзинг">Заказать Мерчандайзинг</option>
+                            <option value="Заказать Аутстаффинг">Заказать Аутстаффинг</option>
+                            <option value="Заказать BTL">Заказать BTL</option>
+                            <option value="Заказать Тайного покупателя">Заказать Тайного покупателя</option>
+                            <option value="Задать вопрос">Задать вопрос</option>
+                        </select>
+                    </div>
+                    <div class="form-inputs-line">
+                        <input class="form-input form-field" type="text" name="email" placeholder="Ваш Email">
+                        <input class="form-input form-field" type="text" name="phone" placeholder="Или ваш телефон" id="phone">
+                    </div>
+                    <div class="form-inputs-line">
+                        <textarea class="form-textarea form-field" name="message" placeholder="Ваше сообщение"></textarea>
+                    </div>
+                    <div class="form-inputs-line">
+                        <button class="from-submit" type="submit">Связаться</button>
+                        <span class="from-submit-info">Ваши Email и телефон будут использоваться исключительно для того, чтобы с вами связаться.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-bg"></div>
+
+        </form>
+    </div>
+</section>
+
+<script type="module" src="{{ url_for('static', filename='js/feedback.js') }}"></script>

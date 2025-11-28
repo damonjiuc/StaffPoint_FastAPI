@@ -1,0 +1,99 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" lang="ru" content="Агентство мерчандайзинга Staff Point, контакты!" />
+    <meta name="keywords" content="Агентство мерчандайзинга контакты" />
+    <title>Контакты - Staff Point</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="full-screen">
+	<div class="fs-block-s">
+        <img src="/static/imgs/contacts.jpg" alt="">
+    </div>
+	<div class="fs-block-l">
+        <div class="fs-txt">
+            <div class="fs-title">
+                <hr class="title-line" />
+                <h2 class="fs-title">Контакты</h2>
+            </div>
+            <div class="hero-contacts">
+                <div class="contacts-el">
+                    197343, Россия, Санкт-Петербург, Торжковская ул. д.20 лит.А,<br />БЦ Торжковский Лофт
+                </div>
+                <div class="contacts-el">
+                    <span class="contacts-el-title">Отдел продаж:</span>
+                    <span>
+                        <a href="tel:+79215867382">+7&nbsp;(921)&nbsp;586-73-82</a> /
+                        <a href="tel:+79633240394">+7&nbsp;(963)&nbsp;324-03-94</a> /
+                        <a href="tel:+79118400103">+7&nbsp;(911)&nbsp;840-01-03</a>
+                    </span>
+                </div>
+                <div class="contacts-el">
+                    <span class="contacts-el-title">Отдел по работе с клиентами:</span>
+                    <a href="tel:+79627084829">+7&nbsp;(962)&nbsp;708-48-29</a>
+                </div>
+                <div class="contacts-el">
+                    <span class="contacts-el-title">Офис:</span>
+                    <a href="tel:+78129864784">+7 (812) 986-47-84</a>
+                </div>
+                <div class="contacts-el">
+                    <span class="contacts-el-title">E-mail:</span>
+                    <a href="mailto:f.kerov@staffpoint.ru">f.kerov@staffpoint.ru</a>
+                </div>
+            </div>
+        </div>
+	</div>
+</section>
+
+<!--
+<div class="hero">
+    <div class="container">
+        <div class="hero-title">
+            <h1>
+                <b>Staff P<span class="accent-color">o</span>int<br/></b>
+                Контакты
+            </h1>
+        </div>
+        <div class="hero-contacts">
+            <div class="contacts-el">
+                197343, Россия, Санкт-Петербург, Торжковская ул. д.20 лит.А,<br />БЦ Торжковский Лофт, офис 291
+            </div>
+            <div class="contacts-el">
+                <span class="contacts-el-title">Отдел продаж:</span>
+                <span>
+                    <a href="tel:+79215867382">+7&nbsp;(921)&nbsp;586-73-82</a> /
+                    <a href="tel:+79633240394">+7&nbsp;(963)&nbsp;324-03-94</a> /
+                    <a href="tel:+79118400103">+7&nbsp;(911)&nbsp;840-01-03</a>
+                </span>
+            </div>
+            <div class="contacts-el">
+                <span class="contacts-el-title">Отдел по работе с клиентами:</span>
+                <a href="tel:+79627084829">+7&nbsp;(962)&nbsp;708-48-29</a>
+            </div>
+            <div class="contacts-el">
+                <span class="contacts-el-title">Офис:</span>
+                <a href="tel:+78129864784">+7 (812) 986-47-84</a>
+            </div>
+            <div class="contacts-el">
+                <span class="contacts-el-title">E-mail:</span>
+                <a href="mailto:f.kerov@staffpoint.ru">f.kerov@staffpoint.ru</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-video-dimmer"></div>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/static/background.mp4" type="video/mp4">
+    </video>
+</div>
+-->
+
+{% include 'main/_feedback_form.html' %}
+
+
+{% endblock %}

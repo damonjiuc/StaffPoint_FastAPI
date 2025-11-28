@@ -1,0 +1,229 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" lang="ru" content="Мерчандайзинг товаров в магазинах {{ region.insert if region }} от Staff Point. Профессиональная выкладка, фотоотчёты, контроль и аналитика продаж. 20+ лет опыта и более 350 городов обслуживания!" />
+    <meta name="keywords" content="мерчандайзинг {{ region.insert if region }}, мерчандайзинг товаров {{ region.insert if region }}, услуги мерчандайзинга, выкладка товаров {{ region.insert if region }}, Staff Point" />
+    <title>Мерчандайзинг товаров в магазинах {{ region.insert if region }} — Staff Point</title>
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="container">
+        <div class="hero-title">
+            <h1>
+                <b>Staff P<span class="accent-color">o</span>int<br/></b>
+                Услуги мерчандайзинга товаров в магазинах<br/>
+                {{ region.insert if region}}
+            </h1>
+        </div>
+        <div class="hero-txt">
+            <p>
+                Без грамотного представления, даже лучший продукт теряет шанс быть замеченным. Мы помогаем увеличить продажи за счёт
+                правильной презентации бренда на полке, поддержания стандартов и дисциплины в торговых точках.
+            </p>
+            <p><b>Эффективная выкладка — <span class="accent-color">Ваши продажи в действии</span>.</b></p>
+            <p>
+                Мы поможем Вам занять лучшие позиции на полках и привлечь внимание покупателей. Мерчандайзинг в магазинах
+                направлен на то, чтобы каждый Ваш товар был расширенно представлен на полке и Ваши бренды — стали заметнее,
+                относительно позиций конкурентов.
+            </p>
+        </div>
+    </div>
+    <div class="hero-video-dimmer"></div>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/static/background.mp4" type="video/mp4">
+    </video>
+</div>
+
+<section class="adv-icons">
+    <div class="container">
+        <h2>Мы знаем о мерчендайзинге все!</h2>
+        <div class="section-subtitle">До того, как мы <b>подберем</b> для Вас <b>подходящую программу мерчендайзинга</b>, Мы <b>ответим на</b> Ваши самые <b>главные вопросы</b></div>
+        <ul class="adv-icons-list">
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_shop.png" alt="" title="">
+                <h4 class="adv-icons-title"></h4>
+                <div class="adv-icons-txt">
+                    Понимаем разницу между каналами FMCG, beauty и DIY. Разные направления - разный персонал и
+                    индивидуальный подход к товарным категориям.
+                </div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_stand.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">
+                    Как согласовать и поставить в федеральных торговых сетях паллет с продукцией или торговую стойку с большим
+                    дисконтом, выставить Ваш бренд на дополнительных торцевых полках.
+                </div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_raise.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">
+                    Как увеличить квант заказа в магазинах с жесткой системой автозаказов. Мы определим угрозы возникновения
+                    out-of-stock и предложим инструменты для  предупреждения этого события.
+                </div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_shelf.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">
+                    Как добиться большей представленности по «фейсам» на полке, чем у ваших конкурентов. Предоставим возможности
+                    по расширению и определим вероятные точки роста продаж Вашего продукта.
+                </div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_4hands.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">
+                    Как забыть про постоянную ротацию персонала, нехватку сотрудников, проблемы с поиском и отбором, пустующие
+                    торговые точки и провалы с продажами.
+                </div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_guy_hand.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">
+                    Поможем разобраться и вместе оценим - какой персонал вам нужен. Мерчендайзер или все же продавец-консультант.
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="service-comp medium-bg">
+    <div class="container">
+        <h2>Что входит в услугу мерчандайзинга в магазинах {{ region.insert if region }}</h2>
+        <div class="section-subtitle">Мы <b>берем на себя все</b> что касается Вашего представления в торговых точках</div>
+        <div class="service-comp-wrap">
+            <ul class="service-comp-list">
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Подбор и обучение персонала</h4>
+                    <div class="service-comp-txt">
+                        Все наши мерчендайзеры проходят обучение по продукту, работают по системе KPI, контролируют соблюдение
+                        брендбуков и мерч-гайдов, имеют опыт работы в ритэйле 2+ года, оформлены согласно законодательству РФ.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Отчетность </h4>
+                    <div class="service-comp-txt">
+                        Предоставляем полную информацию об всем, что касается Вашего продукта в торговой точке: фотоотчёты до и
+                        после выкладки, остатки, информируем об угрозе возникновения OOS, проверяем актуальность ценников и
+                        активных акций.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Технологии</h4>
+                    <div class="service-comp-txt">
+                        Используем иновационную онлайн-платформу, в которой вся информация доступна заказчику в режиме реального времени 24/7.
+                        Геолокация с привязкой к каждому обслуживаемому магазину и фотографией рабочего времени. Удобный конструктор отчетов
+                        позволяет Вам собирать только нужные данные и интегрировать в Ваши таблицы и аналитику.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Координация с персоналом торговой точки</h4>
+                    <div class="service-comp-txt">
+                        Используя свой многолетний опыт работы в разных товарных категориях во всех торговых сетях, имеем устойчивые
+                        рабочие связи с ЛПР. Это позволяет быстро решать поставленные задачи, занимать дополнительные места продаж,
+                        формировать нетипичные пространства для выкладки товара.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Совместный мониторинг и анализ результатов</h4>
+                    <div class="service-comp-txt">
+                        Анализируем эффективность проекта, определяем динамику продаж, предоставляем рекомендации по оптимизации
+                        работы и увеличения объемов выручки.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Клиентский сервис</h4>
+                    <div class="service-comp-txt">
+                        На каждый проект мы предоставляем профессионального личного менеджера - координатора. Этот человек будет
+                        постоянно на связи с Вами, знает все тонкости food или non food ритейла и поможет избежать ошибок на всех
+                        этапах работы.
+                    </div>
+                </li>
+            </ul>
+            <div class="service-comp-img" id="service-comp-img-merch"></div>
+        </div>
+    </div>
+</section>
+
+<section class="adv">
+    <div class="container">
+        <h2>В чем наша уникальность?</h2>
+        <ul class="adv-list">
+            <li class="adv-el">
+                <h4 class="adv-title">On-line отчетность</h4>
+                <div class="adv-icons-txt">
+                    Беcплатная для Вас технологичная и передовая CRM платформа для контроля полевого персонала. Гибкая,
+                    безопасная и удобная в управлении с интеграцией под все именно Ваши задачи.
+                </div>
+            </li>
+            <li class="adv-el">
+                <div class="adv-title">20+ лет опыта</div>
+                <div class="adv-txt">
+                    Присутствие во всех городах России. Все федеральные и локальные торговые сети на обслуживании. Сотни успешно
+                    реализованных проектов в каналах FMCG, beauty, DIY.
+                </div>
+            </li>
+            <li class="adv-el">
+                <div class="adv-title">Ни одного агентства на подряде</div>
+                <div class="adv-txt">
+                    Работаем только со своими командами мерчандайзеров во всех городах РФ - нет задержек в реакции,
+                    потерь качества и бюрократии.
+                </div>
+            </li>
+            <li class="adv-el">
+                <div class="adv-title">Персонал на проектах</div>
+                <div class="adv-txt">
+                    Помогаем забыть про постоянную ротацию персонала на проекте, нехватку сотрудников, проблемы с поиском и
+                    отбором, пустующие торговые точки и провалы с продажами.
+                </div>
+            </li>
+            <li class="adv-el">
+                <div class="adv-title">Скорость и контроль</div>
+                <div class="adv-txt">
+                    Умеем быстро создавать профессиональные полевые команды. Помогаем нашим Клиентам оптимизировать бюджет,
+                    сохранить полный контроль над проектом и полностью влиять на свои продажи.
+                </div>
+            </li>
+            <li class="adv-el">
+                <div class="adv-title">Юридическая чистота</div>
+                <div class="adv-txt">
+                    Все наши сотрудники оформлены официально. Полная чистота и прозрачность отношений. Мы полностью соблюдаем
+                    трудовое и налоговое законодательство.
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="grid-nets medium-bg">
+    <div class="container">
+        <h2>Сети в которых мы уже работаем</h2>
+        <div class="grid-nets-wrap">
+            <div class="grid-nets-el"><img src="/static/nets_logos/ashan.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-diksi.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-magnit.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-okey.jpg" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-perekrestok.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-pyatyorochka.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/roznitsa-metro.jpg" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/lenta_logo.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/atak-logo.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/vernij.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/globus.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/spar.png" alt=""></div>
+        </div>
+    </div>
+</section>
+
+{% include 'main/_feedback_form.html' %}
+
+{% endblock %}

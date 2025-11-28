@@ -1,0 +1,200 @@
+.hero .container {
+    justify-content: start;
+}
+
+.hero-title {
+    margin: 24px 0;
+    position: relative;
+    z-index: 3;
+    color: var(--white);
+}
+
+.hero-title h1 {
+    font-size: 42px;
+    font-family: "Roboto Slab",serif;
+}
+
+.hero-title b {
+    font-size: 96px;
+    text-decoration: underline;
+}
+
+.hero-txt {
+    z-index: 3;
+    width: 720px;
+    color: var(--white);
+    font-size: 18px;
+    line-height: 1.6em;
+    background-color: var(--medium-bg);
+}
+
+.hero-txt p {
+    margin-bottom: 1em;
+}
+
+.services-list-item {
+    list-style: inside;
+    list-style-type: none;
+}
+
+.services-list-item:before {
+    content: "✔ ";
+}
+
+@media (max-width: 768px) {
+    .hero-title b {
+        font-size: 72px;
+    }
+
+    .hero-title h1 {
+        font-size: 32px;
+    }
+
+    .hero-txt {
+        width: 100%;
+    }
+}
+
+/* service-comp */
+
+.service-comp-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-comp-list {
+    display: block;
+    width: 56%;
+}
+
+.service-comp-el {
+    position: relative;
+    margin-bottom: 24px;
+    background-color: var(--medium);
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid var(--white);
+    transition: border .5s ease-out;
+}
+
+.service-comp-el:hover {
+    border: 2px solid var(--accent);
+}
+
+.service-comp-el:last-child {
+    margin-bottom: 0;
+}
+
+.service-comp-title {
+    margin-bottom: 6px;
+    color: var(--accent);
+}
+
+.service-comp-txt {
+    color: var(--dark);
+}
+
+.service-comp-img {
+    width: 40%;
+    border-radius: 8px;
+}
+
+#service-comp-img-merch {
+    background: linear-gradient(rgba(40,40,40,.9),rgba(40,40,40,.6)), url(../imgs/service-comp/merch.jpeg) no-repeat 50%;
+    background-size: cover;
+}
+
+#service-comp-img-beauty {
+    background: linear-gradient(rgba(40,40,40,.9),rgba(40,40,40,.6)), url(../imgs/service-comp/beauty.jpg) no-repeat 50%;
+    background-size: cover;
+}
+
+#service-comp-img-diy {
+    background: linear-gradient(rgba(40,40,40,.9),rgba(40,40,40,.6)), url(../imgs/service-comp/diy.jpg) no-repeat 50%;
+    background-size: cover;
+}
+
+#service-comp-img-meds {
+    background: linear-gradient(rgba(40,40,40,.9),rgba(40,40,40,.6)), url(../imgs/service-comp/meds.jpg) no-repeat 50%;
+    background-size: cover;
+}
+
+#service-comp-img-posm {
+    background: linear-gradient(rgba(40,40,40,.9),rgba(40,40,40,.6)), url(../imgs/service-comp/posm.jpg) no-repeat 50%;
+    background-size: cover;
+}
+
+#service-comp-img-tech {
+    background: linear-gradient(rgba(40,40,40,.9),rgba(40,40,40,.6)), url(../imgs/service-comp/merch-tech.jpg) no-repeat 50%;
+    background-size: cover;
+}
+
+#service-comp-img-learning {
+    background: linear-gradient(rgba(40,40,40,.9),rgba(40,40,40,.6)), url(../imgs/service-comp/learning.jpg) no-repeat 50%;
+    background-size: cover;
+}
+
+#service-comp-img-audit {
+    background: linear-gradient(rgba(40,40,40,.9),rgba(40,40,40,.6)), url(../imgs/service-comp/audit.jpg) no-repeat 50%;
+    background-size: cover;
+}
+
+#service-comp-img-mystery {
+    background: linear-gradient(rgba(40,40,40,.9),rgba(40,40,40,.6)), url(../imgs/service-comp/mystery.jpg) no-repeat 50%;
+    background-size: cover;
+}
+
+#service-comp-img-outsource {
+    background: linear-gradient(rgba(40,40,40,.9),rgba(40,40,40,.6)), url(../imgs/service-comp/outsource.jpg) no-repeat 50%;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .service-comp-wrap {
+        display: block;
+    }
+
+    .service-comp-list, .service-comp-img {
+        width: 100%;
+    }
+}
+
+/* end service-comp */
+
+
+/* grid-nets */
+
+.grid-nets-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background-color: var(--medium);
+}
+
+.grid-wrap-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-wrap-6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.grid-nets-el {
+    background: var(--white);
+    padding: 32px;
+    display: flex;
+}
+
+.grid-nets-el img {
+    display: block;
+    margin: auto;
+    max-height: 60px;
+    filter: grayscale(1);
+    cursor: pointer;
+}
+
+.grid-nets-el img:hover {
+    filter: none;
+}
+
+/* end grid-nets */

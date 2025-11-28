@@ -1,0 +1,28 @@
+<nav class="top-menu">
+    <div class="container menu-container">
+        <h3 class="menu-logo"><a href="{{ url_for_service('', region) }}">Staff Point</a></h3>
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+        <ul class="menu-items">
+            <li class="menu-item"><a class="menu-item-link" href="{{ url_for_service('#services', region) }}">Услуги</a></li>
+	        <!--<li class="menu-item"><a class="menu-item-link" href="#">Вакансии</a></li>-->
+            <li class="menu-item"><a class="menu-item-link" href="{{ url_for_service('about', region) }}">О нас</a></li>
+            <!--<li class="menu-item"><a class="menu-item-link" href="#">Новости</a></li>-->
+            <li class="menu-item"><a class="menu-item-link" href="{{ url_for_service('contacts', region) }}">Контакты</a></li>
+        </ul>
+
+        <div class="menu-region dropdown">
+          <button class="dropdown-toggle" id="current-region">Регион</button>
+          <ul class="dropdown-menu">
+            <li data-region="">Россия</li>
+            {% for slug, r in regions.items() %}
+              <li data-region="{{ r.slug }}">{{ r.name }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <a href="tel:+79633240394" class="menu-tel">+7 (963) 324-03-94</a>
+        <a class="menu-btn" href="{{ url_for_service('#feedback-form', region) }}">Свяжитесь с нами</a>
+    </div>
+</nav>

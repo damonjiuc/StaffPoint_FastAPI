@@ -1,0 +1,145 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block meta %}
+    <title>Технический мерчандайзинг (установка торгового оборудования и размещение POSM) — Staff Point</title>
+    <meta name="description" content="Профессиональный технический мерчандайзинг от Staff Point. Установка и обслуживание рекламного оборудования, монтаж POSM и контроль размещения в торговых точках.">
+    <meta name="keywords" content="технический мерчандайзинг, установка рекламного оборудования, монтаж POSM, установка витрин, обслуживание оборудования, Staff Point, монтаж в магазинах">
+{% endblock %}
+
+{% block content %}
+<div class="hero" id="hero-posm">
+    <div class="container">
+        <div class="hero-title">
+            <h1>
+                <b>Staff P<span class="accent-color">o</span>int<br/></b>
+                Технический мерчандайзинг<br/>
+                (Установка торгового оборудования и<br/>
+                Размещение POSM)<br/>
+                {{ region.insert if region }}
+            </h1>
+        </div>
+        <div class="hero-txt">
+            <p>
+                Технический мерчандайзинг и размещение POSm позволяет максимально выделить Вашу продукцию среди конкурентов и
+                эффектно представить ваш бренд в магазине.
+            </p>
+            <p>
+                Наши специалисты произведут корректное размещение POSm в магазинах, безопасно произведут сборку и установку
+                рекламного и торгового оборудования, разместят продукцию.
+            </p>
+        </div>
+    </div>
+    <div class="hero-video-dimmer"></div>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/static/background.mp4" type="video/mp4">
+    </video>
+</div>
+
+<section class="service-comp first-section">
+    <div class="container">
+        <h2>Что входит в услугу установки торгового оборудования {{ region.insert if region }}</h2>
+        <div class="section-subtitle">Мы <b>берем на себя все</b>, что касается размещения POSM в торговых точках</div>
+        <div class="service-comp-wrap">
+            <ul class="service-comp-list">
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Прямая выгода</h4>
+                    <div class="service-comp-txt">
+                        Договоримся на ВАШИХ УСЛОВИЯХ об установке и размещении Вашего товара на палетах, стойках и дополнительных
+                        местах продаж в Федеральных и локальных сетях.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Изготовление оборудования</h4>
+                    <div class="service-comp-txt">
+                        Производим стойки, POS-материалы и конструкции с учётом всех требований и пожеланий клиента.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Логистика</h4>
+                    <div class="service-comp-txt">
+                        Возьмем на себя все решения по доставке от места производства или хранения до каждой торговой точки в
+                        любом регионе РФ.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Монтаж</h4>
+                    <div class="service-comp-txt">
+                        Произведем приемку и корректную сборку Вашего оборудования, установим POSm.  Разместим ваш товар согласно
+                        планограмме, поставим ценники.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Внешний вид</h4>
+                    <div class="service-comp-txt">
+                        Позаботимся о чистоте и привлекательном виде Вашего оборудования и промо материалов. При необходимости
+                        произведем ремонт, перестановку, демонтаж и утилизацию конструкций.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Отчетность</h4>
+                    <div class="service-comp-txt">
+                        Предоставим подробный фотоотчет выполненных работ, установленного оборудования и продукции.
+                    </div>
+                </li>
+            </ul>
+            <div class="service-comp-img" id="service-comp-img-posm"></div>
+        </div>
+    </div>
+</section>
+
+
+<section class="adv" id="why-posm">
+    <div class="container">
+        <h2>Почему выбирают Staff Point</h2>
+        <ul class="adv-list">
+            <li class="adv-el">
+                <h4 class="adv-title">Экономия до 70%</h4>
+                <div class="adv-txt">
+                    Договоримся с Федеральными торговыми  сетями об установке паллета с продукцией  или торговой стойки с
+                    большим дисконтом. Сможем добиться представления Вашего бренда на дополнительных местах продаж
+                </div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Опыт 20+ лет</h4>
+                <div class="adv-txt">
+                    Понимаем разницу между каналами  FMCG, DIY и Beauty. Нужны разные исполнители и разный подход
+                </div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Ни одного агентства на подряде</h4>
+                <div class="adv-txt">
+                    Работаем только со своими командами мерчендайзеров и технических специалистов во всех городах РФ - нет задержек в реакции, потерь качества и бюрократии
+                </div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">On-line отчетность</h4>
+                <div class="adv-txt">
+                    Бесплатная для вас технологичная и передовая CRM платформа для контроля полевого персонала. Гибкая,
+                    безопасная и удобная в управлении с интеграцией под все именно Ваши задачи
+                </div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Сотрудники</h4>
+                <div class="adv-txt">
+                    Персонал на наших проектах - это полноценные технические специалисты, с опытом работы в отрасли 2+ года,
+                    прошедшие специальные тренинги и имеющие все необходимые инструменты
+                </div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Квалификация</h4>
+                <div class="adv-txt">
+                    Знаем как поддерживать чистоту и исправность тестеров, дисплеев, стендов и POSM-материалов. Это важная
+                    часть восприятия бренда и доверия покупателя к продукту
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+{% include 'main/_feedback_form.html' %}
+
+{% endblock %}

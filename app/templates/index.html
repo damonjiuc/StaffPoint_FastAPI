@@ -1,0 +1,223 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" lang="ru" content="Агентство мерчандайзинга Staff Point! ✔Услуги мерчандайзинга {{ region.insert if region}}! ✔Услуги аутстаффинга {{ region.insert if region}}! ➤➤У нас Вы можете заказать мерчандайзинг, аутстаффинг персонала, тайного покупателя {{ region.insert if region}}! ➤20+ лет на рынке! 350+ города на обслуживании!" />
+    <meta name="keywords" content="Агентство мерчандайзинга {{ region.insert if region}}, Услуги мерчандайзинга {{ region.insert if region}}, улуги выкладки товаров {{ region.insert if region}}, услуги аутсорсинга {{ region.insert if region}}, технический мерчандайзинг {{ region.insert if region}}, размещение POSM {{ region.insert if region}}" />
+    <title>Услуги мерчандайзнга {{ region.insert if region}} - Staff Point</title>
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="container">
+        <div class="hero-logo">
+            <h1>
+                <b>Staff P<span class="accent-color">o</span>int<br/></b>
+                Мерчандайзинговое агентство<br/>
+                {{ region.insert if region}}
+            </h1>
+        </div>
+
+        <div class="numbers-group">
+
+            <div class="number-el">
+                <div class="number-title">20+</div>
+                <div class="number-subtitle">лет</div>
+            </div>
+            <div class="number-el">
+                <div class="number-title">350+</div>
+                <div class="number-subtitle">городов</div>
+            </div>
+            <div class="number-el">
+                <div class="number-title">30 000+</div>
+                <div class="number-subtitle">торговых точек</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="hero-video-dimmer"></div>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/static/background.mp4" type="video/mp4">
+    </video>
+</div>
+
+
+
+<!--
+<section class="numbers">
+    <div class="container">
+        <div class="numbers-group">
+            <div class="number-el">
+                <div class="number-title">20+</div>
+                <div class="number-subtitle">лет</div>
+                <div class="number-text">на рынке меренданайзинга</div>
+            </div>
+            <div class="number-el">
+                <div class="number-title">350+</div>
+                <div class="number-subtitle">городов</div>
+                <div class="number-text">на обслуживании</div>
+            </div>
+            <div class="number-el">
+                <div class="number-title">30 000+</div>
+                <div class="number-subtitle">торговых точек</div>
+                <div class="number-text">на обслуживании ежедневно</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+-->
+
+<section>
+    <div class="swiper container nets-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/static/nets_logos/ashan.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/logo-diksi.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/logo-magnit.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/logo-okey.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/logo-perekrestok.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/logo-pyatyorochka.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/roznitsa-metro.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/lenta_logo.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/atak-logo.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/vernij.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/globus.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/spar.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/lemana.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/Detskij-mir.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/kari.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/4lapy.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/bethowen.svg" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/beauty/rg.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/beauty/letual.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/beauty/zya.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/beauty/mc.webp" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/beauty/podruzhka.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/leonardo.png" alt=""></div>
+        </div>
+    </div>
+
+</section>
+
+<section class="services" id="services">
+    <div class="container">
+        <h2 class="section-title">Что мы можем вам предложить?</h2>
+        <div class="services-group">
+            <a id="services-el-retail" href="{{ url_for_service('merch', region) }}" class="services-el">
+                <h3>Мерчандайзинг товаров в магазинах<br />{{ region.insert if region}}</h3>
+            </a>
+            <a id="services-el-beauty" href="{{ url_for_service('merch-beauty', region) }}" class="services-el">
+                <h3>Мерчандайзинг бьюти-товаров<br />{{ region.insert if region}}</h3>
+            </a>
+            <a id="services-el-diy" href="{{ url_for_service('merch-diy', region) }}" class="services-el">
+                <h3>Мерчандайзинг DIY<br />{{ region.insert if region}}</h3>
+            </a>
+            <a id="services-el-meds" href="{{ url_for_service('merch-meds', region) }}" class="services-el">
+                <h3>Мерчандайзинг в аптеках<br />{{ region.insert if region}}</h3>
+            </a>
+            <a id="services-el-placement" href="{{ url_for_service('posm-placement', region) }}" class="services-el">
+                <h3>Технический мерчандайзинг<br />Установка торгового оборудования<br />(Размещение POSM)<br />{{ region.insert if region}}</h3>
+            </a>
+            <a id="services-el-learning" href="{{ url_for_service('learning', region) }}" class="services-el">
+                <h3>Мониторинг в магазинах<br />{{ region.insert if region}}</h3>
+            </a>
+            <a id="services-el-audit" href="{{ url_for_service('audit', region) }}" class="services-el">
+                <h3>Аудит торговых точек<br />(мерчандайзинга)<br />{{ region.insert if region}}</h3>
+            </a>
+            <a id="services-el-mystery" href="{{ url_for_service('mystery', region) }}" class="services-el">
+                <h3>Таинственный покупатель<br />{{ region.insert if region}}</h3>
+            </a>
+            <a id="services-el-outsource-staff" href="{{ url_for_service('outsource-staff', region) }}" class="services-el">
+                <h3>Аутсорсинг персонала<br />{{ region.insert if region}}</h3>
+            </a>
+            <!--
+            <a id="services-el-tech" href="{{ url_for_service('merch-tech', region) }}" class="services-el">
+                <h3>Технический мерчандайзинг<br />(Установка рекламного оборудования)<br />{{ region.insert if region}}</h3>
+            </a>
+            <a id="services-el-outsource-sales" href="{{ url_for_service('outsource-sales', region) }}" class="services-el">
+                <h3>Аутсорсинг продаж<br />{{ region.insert if region}}</h3>
+            </a>
+            <a id="services-el-retail-audit" href="{{ url_for_service('retail-audit', region) }}" class="services-el">
+                <h3>Ритейл аудит<br />{{ region.insert if region}}</h3>
+            </a>
+
+            -->
+        </div>
+    </div>
+</section>
+
+<section class="adv-icons">
+    <div class="container">
+        <h2 class="section-title">Почему мы?</h2>
+        <h3>Staff Point - это:</h3>
+        <ul class="adv-icons-list">
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_comp.png" alt="" title="">
+                <h4 class="adv-icons-title">On-line отчетность</h4>
+                <div class="adv-icons-txt">Бесплатная для Вас иновационная онлайн-платформа для контроля персонала с геолокацией всех магазинов. Конструктор отчетов позволит Вам собирать только нужные данные</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_lamp.png" alt="" title="">
+                <div class="adv-icons-title">20+ лет опыта</div>
+                <div class="adv-icons-txt">Понимаем большую разницу между каналами FMCG, beauty и DIY. Разные направления - разный персонал и индивидуальный подход к товарным категориям.</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_agency.png" alt="" title="">
+                <div class="adv-icons-title">Ни одного агентства на подряде</div>
+                <div class="adv-icons-txt">Работаем только со своими командами полевых сотрудников во всех городах РФ - нет задержек в реакции, потерь качества и бюрократии.</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_learn.png" alt="" title="">
+                <div class="adv-icons-title">Персонал</div>
+                <div class="adv-icons-txt">Все наши мерчендайзеры проходят обучение по продукту, работают по системе KPI, имеют опыт работы в ритэйле 2+ года, оформлены согласно законодательству РФ.</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_map.png" alt="" title="">
+                <div class="adv-icons-title">Покрытие</div>
+                <div class="adv-icons-txt">Поможем забыть про постоянную ротацию персонала, нехватку сотрудников, проблемы с поиском и отбором, пустующие торговые точки и провалы с продажами.</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_control.png" alt="" title="">
+                <div class="adv-icons-title">Контроль</div>
+                <div class="adv-icons-txt">Система собственного внутреннего аудита нашего агентства позволяет контролировать все этапы проекта, предупреждать негативные события и избегать рисков.</div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="mission-section">
+	<div class="container">
+        <h2 class="section-title">Миссия STAFFpoint</h2>
+        <ul class="mission-list">
+            <li class="mission-el">
+                Предоставить услуги высочайшего качества даже в самых отдаленных уголках РФ.
+            </li>
+            <li class="mission-el">
+                Демонстрировать полную прозрачность ведения бизнеса.
+                Наш клиент всегда точно знает за какие работы он платит и может детально все проверить.
+            </li>
+            <li class="mission-el">
+                Оказывать услуги, доступные для любого размера бизнеса - будь то маленькое предприятие или крупнейший производитель.
+            </li>
+            <li class="mission-el">
+                Нести полную социальную ответственность перед всеми своими сотрудниками,
+                предоставляя им гарантии своевременной и справедливой оплаты труда.
+            </li>
+        </ul>
+	</div>
+</section>
+
+
+{% include 'main/_feedback_form.html' %}
+
+
+{% endblock %}
+
+
+{% block js %}
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock %}

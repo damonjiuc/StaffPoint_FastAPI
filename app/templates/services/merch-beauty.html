@@ -1,0 +1,196 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" lang="ru" content="Услуги мерчандайзинга бьюти-товаров {{ region.insert if region }} от Staff Point. Профессиональное оформление выкладки косметики и парфюмерии, контроль стандартов бренда и фотоотчётность. Мы знаем, как сделать ваш бренд заметным на полке!" />
+    <meta name="keywords" content="услуги мерчандайзинга бьюти-товаров {{ region.insert if region }}, мерчандайзинг косметики, мерчандайзинг парфюмерии, beauty мерчандайзинг, Staff Point" />
+    <title>Услуги мерчандайзинга бьюти-товаров {{ region.insert if region }} — Staff Point</title>
+{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="container">
+        <div class="hero-title">
+            <h1>
+                <b>Staff P<span class="accent-color">o</span>int<br/></b>
+                Услуги мерчандайзинга бьюти-товаров<br/>
+                {{ region.insert if region }}
+            </h1>
+        </div>
+        <div class="hero-txt">
+            <p>
+                В сегменте beauty особенно важно, чтобы покупатель не просто увидел товар, а ощутил эстетику и атмосферу бренда.
+                Мы создаём визуальную гармонию и правильную логику выкладки, которая усиливает доверие к продукту и формирует желание купить.
+            </p>
+            <p>
+                Наши консультанты-мерчандайзеры обучены особенностям косметических категорий, знают стандарты сетей и брендов,
+                поддерживают безупречный внешний вид стендов и POSM-материалов.
+                Благодаря фотоотчету и контролю качества, вы всегда видите результат в реальном времени.
+            </p>
+            <p><b>Красота, порядок и узнаваемость бренда — это то, что делает бьюти-мерчандайзинг от Staff Point особенным.</b></p>
+        </div>
+    </div>
+    <div class="hero-video-dimmer"></div>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/static/background.mp4" type="video/mp4">
+    </video>
+</div>
+
+<section class="adv-icons">
+    <div class="container">
+        <h2>Мы знаем о мерчендайзинге beauty товаров все!</h2>
+        <div class="section-subtitle">До того, как мы <b>подберем</b> для Вас <b>подходящую программу мерчендайзинга</b>, Мы <b>ответим на</b> Ваши самые <b>главные вопросы</b></div>
+        <ul class="adv-icons-list">
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_shop.png" alt="" title="">
+                <h4 class="adv-icons-title"></h4>
+                <div class="adv-icons-txt">Как поддержать чистоту и исправность тестеров, дисплеев, стендов и POSM-материалов. Это важная часть восприятия бренда и доверия покупателя к продукту</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_guy_hand.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">Зачастую Вам нужен именно продавец-консультант. Классический мерчендайзинг в beauty уходит на второй план</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_calc.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">Как избежать угрозы OOS, правильно посчитать остатки, актуализировать ценники и улучшить выкладку</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_raise.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">Как лучше представить Ваш товар покупателю в магазине, провести профессиональную консультацию, познакомить с брендом</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_route.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">Как составить оптимальные маршруты для исполнителей, если проект предусматривает визитное посещение нескольких магазинов</div>
+            </li>
+            <li class="adv-icons-el">
+                <img src="/static/icons/icon_map.png" alt="" title="">
+                <div class="adv-icons-title"></div>
+                <div class="adv-icons-txt">Как создать свою собственную полноценную команду, минимизировать бюджет, но сохранить полный контроль и управление людьми и полностью влиять на свои продажи</div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="service-comp medium-bg">
+    <div class="container">
+        <h2>Что входит в услугу мерчандайзинга бьюти-товаров {{ region.insert if region }}</h2>
+        <div class="section-subtitle">Мы <b>берем на себя все</b>, что касается представления вашего бренда в торговых точках</div>
+        <div class="service-comp-wrap">
+            <ul class="service-comp-list">
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Выкладка и оформление продукции</h4>
+                    <div class="service-comp-txt">
+                        Обеспечиваем привлекательную, логичную и аккуратную выкладку косметики и парфюмерии в соответствии со стандартами бренда и сетей.
+                        Особое внимание — чистоте, симметрии и визуальному балансу на полке.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Контроль наличия и актуальности товара</h4>
+                    <div class="service-comp-txt">
+                        Проверяем наличие  полного ассортимента, тестеров и промо-позиций. Следим, чтобы каждый SKU был
+                        представлен расширенным фейсингом, а ценники актуальны и корректны размещены.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Уход за тестерами и оборудованием</h4>
+                    <div class="service-comp-txt">
+                        Поддерживаем чистоту и исправность тестеров, дисплеев, стендов и POSM-материалов.
+                        Это важная часть восприятия бренда и доверия покупателя к продукту.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Фотоотчётность и контроль стандартов</h4>
+                    <div class="service-comp-txt">
+                        Предоставляем фотоотчёты, остатки и информируем об угрозе возникновения OOS в технологичной онлайн-платформе,
+                        контролируем соблюдение брендбуков и мерч-гайдов. Вся информация доступна заказчику в режиме реального времени.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Обучение и поддержка персонала</h4>
+                    <div class="service-comp-txt">
+                        Наши специалисты проходят обучение по брендовым стандартам и особенностям beauty-категорий и
+                        имеют опыт работы 2+ года в сегменте beauty. Все это гарантирует единый высокий уровень обслуживания и
+                        презентации товара.
+                    </div>
+                </li>
+            </ul>
+            <div class="service-comp-img" id="service-comp-img-beauty"></div>
+        </div>
+    </div>
+</section>
+
+
+<section class="adv" id="why-beauty">
+    <div class="container">
+        <h2>Почему выбирают Staff Point</h2>
+        <ul class="adv-list">
+            <li class="adv-el">
+                <h4 class="adv-title">Иновационные инструменты контроля</h4>
+                <div class="adv-txt">
+                    Мы используем передовые CRM системы для контроля полевого персонала
+                </div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Экономия</h4>
+                <div class="adv-txt">
+                    Мы помогаем существенно сократить расходы на содержание собственной полевой команды, не уменьшая
+                    количество персонала
+                </div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">On-line отчетность</h4>
+                <div class="adv-txt">
+                    Технологичная и безопасная CRM платформа для контроля полевого персонала. Интуитивный конструктор отчетов
+                    поможет собирать только нужную информацию и отсеивать лишнее
+                </div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Персонал</h4>
+                <div class="adv-txt">
+                    Наши профессиональные продавцы - консультанты имеют большой опыт работы в beauty индустрии, обучены технике
+                    продаж в ритейле и умеют создавать положительное восприятие бренда
+                </div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Расширение полочного пространства</h4>
+                <div class="adv-txt">
+                    Реально улучшаем видимость Вашего продукта за счет увеличения количества фейсов и создание корпоративных блоков
+                </div>
+            </li>
+            <li class="adv-el">
+                <h4 class="adv-title">Администрирование проекта</h4>
+                <div class="adv-txt">
+                    На каждый проект мы предоставляем профессионального менеджера - координатора. Этот человек знает все тонкости
+                    бьюти ритейла и поможет избежать ошибок на всех этапах
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="grid-nets medium-bg">
+    <div class="container">
+        <h2>Сети в которых мы уже работаем</h2>
+        <div class="grid-nets-wrap grid-wrap-3">
+            <div class="grid-nets-el"><img src="/static/nets_logos/beauty/rg.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/beauty/letual.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/beauty/zya.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/beauty/mc.webp" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/beauty/podruzhka.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/beauty/raduga.svg" alt=""></div>
+        </div>
+    </div>
+</section>
+
+{% include 'main/_feedback_form.html' %}
+
+{% endblock %}

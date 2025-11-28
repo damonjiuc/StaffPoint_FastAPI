@@ -1,0 +1,242 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" lang="ru" content="Агентство мерчандайзинга Staff Point! ✔Услуги мерчандайзинга {{ region.insert if region}}! ✔Услуги аутстаффинга {{ region.insert if region}}! ➤➤У нас Вы можете заказать мерчандайзинг, аутстаффинг персонала, тайного покупателя {{ region.insert if region}}! ➤20+ лет на рынке! 350+ города на обслуживании!" />
+    <meta name="keywords" content="Агентство мерчандайзинга {{ region.insert if region}}, Услуги мерчандайзинга {{ region.insert if region}}, улуги выкладки товаров {{ region.insert if region}}, услуги аутсорсинга {{ region.insert if region}}, технический мерчандайзинг {{ region.insert if region}}, размещение POSM {{ region.insert if region}}" />
+    <title>Услуги мерчандайзнга {{ region.insert if region}} - Staff Point</title>
+{% endblock %}
+
+{% block content %}
+<section class="full-screen">
+    <div class="fs-left">
+        <div class="number-el">
+            <div class="number-title">20+</div>
+            <div class="number-subtitle">лет</div>
+        </div>
+        <div class="number-el">
+            <div class="number-title">350+</div>
+            <div class="number-subtitle">городов</div>
+        </div>
+        <div class="number-el">
+            <div class="number-title">30 000+</div>
+            <div class="number-subtitle">торговых точек</div>
+        </div>
+    </div>
+    <div class="fs-right">
+        <div class="fs-txt">
+            <hr class="title-line" />
+            <h1 class="fs-title">
+                О нас
+            </h1>
+            <p>
+                Работая не один год на рынке рекламных услуг, мы ежедневно сталкиваемся с различными
+                трудностями в работе с сетевыми торговыми точками. Нам удалось преодолеть все эти
+                сложности, одновременно оставаясь ответственным и качественным исполнителем.
+            </p>
+            <p>Мы уделили много времени созданию налаженных отношений с персоналом даже в самых удаленных и маленьких торговых точках во всех уголках России.</p>
+            <p>
+                Присутствуя ежедневно во всех сетях федерального и регионального значения мы четко
+                улавливаем любые изменения на рынке. Это позволяет нам оперативно реагировать на
+                происходящее и следовать новым тенденциям.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section class="full-screen vertical-margin">
+	<div class="fs-block">
+        <img src="/static/imgs/about-mission.jpg" alt="">
+        <div class="fs-title-padding">
+            <hr class="title-line" />
+            <h2 class="fs-title">Наша миссия</h2>
+        </div>
+    </div>
+	<div class="fs-block">
+        <ul class="fs-list">
+            <li class="fs-list-el">
+                Предоставить услуги высочайшего качества даже в самых отдаленных уголках РФ.
+            </li>
+            <li class="fs-list-el">
+                Демонстрировать полную прозрачность ведения бизнеса.
+                Наш клиент всегда точно знает за какие работы он платит и может детально все проверить.
+            </li>
+            <li class="fs-list-el">
+                Оказывать услуги, доступные для любого размера бизнеса - будь то маленькое предприятие или крупнейший производитель.
+            </li>
+            <li class="fs-list-el">
+                Нести полную социальную ответственность перед всеми своими сотрудниками,
+                предоставляя им гарантии своевременной и справедливой оплаты труда.
+            </li>
+        </ul>
+	</div>
+</section>
+
+
+<section class="full-screen vertical-margin">
+	<div class="fs-block-l">
+        <div class="fs-padding">
+            <hr class="title-line" />
+            <h2 class="fs-title">Направления нашей работы</h2>
+        </div>
+        <div class="four-txt-pic-txt">
+            <p>
+                Мы предоставляем комплексные решения в области мерчандайзинга и аутсорсинга. Обеспечиваем эффективное
+                представление товаров в торговых точках, поддерживаем стандарты бренда и повышаем продажи.<br />&nbsp;
+            </p>
+            <p>
+                Берем на себя подбор, обучение и управление персоналом, а также контроль качества работы и аналитику результатов —
+                чтобы решения были не только видимыми, но и измеримыми.
+            </p>
+        </div>
+        <div class="four-txt-pic-txt-flex">
+            <div class="four-txt-pic-txt-el">
+                <div class="four-txt-pic-txt-el-title">Мерчандайзинг FMCG, Beauty, DIY</div>
+                <div class="four-txt-pic-txt-el-txt">
+                    Понимаем разницу между торговыми каналами, наш подход индивидуален к каждой товарной категории. Исполняем
+                    задачи только собственными штатными сотрудниками - ни одного агентства на подряде.
+                </div>
+            </div>
+            <div class="four-txt-pic-txt-el">
+                <div class="four-txt-pic-txt-el-title">Аутсорсинг и аутстаффинг персонала</div>
+                <div class="four-txt-pic-txt-el-txt">
+                    20 лет создаем успешные полевые команды, сокращаем расходы нашим клиентам и помогаем навсегда забыть про
+                    ротацию персонала. Обеспечим полную чистоту и прозрачность отношений.
+                </div>
+            </div>
+            <div class="four-txt-pic-txt-el">
+                <div class="four-txt-pic-txt-el-title">Retail аудит и мониторинг</div>
+                <div class="four-txt-pic-txt-el-txt">
+                    Предоставляем точную информацию о состоянии Вашего продукта на полке и показываем реальную картину вашего
+                    бизнеса. Выявляем точки роста и даем конкретные рекомендации для изменения ситуации.
+                </div>
+            </div>
+            <div class="four-txt-pic-txt-el">
+                <div class="four-txt-pic-txt-el-title">Технический мерчандайзинг</div>
+                <div class="four-txt-pic-txt-el-txt">
+                    Максимально эффектно выделим Вашу продукцию среди конкурентов. Берем все на себя - начиная от доставки и
+                    заканчивая сборкой. Договоримся с федеральными сетями о дополнительных местах продаж Вашего продукта.
+                </div>
+            </div>
+        </div>
+	</div>
+	<div class="fs-block-s">
+        <img src="/static/imgs/service-comp/audit.jpg" alt="">
+    </div>
+</section>
+
+<!--
+<section class="four-txt-pic">
+    <div class="container">
+        <div class="four-txt-pic-wrap">
+            <div class="four-txt-pic-left">
+                <h2>Направления нашей работы</h2>
+                <div class="four-txt-pic-txt">
+                    <p>
+                        Мы предоставляем комплексные решения в области мерчандайзинга и аутсорсинга. Обеспечиваем эффективное
+                        представление товаров в торговых точках, поддерживаем стандарты бренда и повышаем продажи.<br />&nbsp;
+                    </p>
+                    <p>
+                        Берем на себя подбор, обучение и управление персоналом, а также контроль качества работы и аналитику результатов —
+                        чтобы решения были не только видимыми, но и измеримыми.
+                    </p>
+                </div>
+                <div class="four-txt-pic-txt-flex">
+                    <div class="four-txt-pic-txt-el">
+                        <div class="four-txt-pic-txt-el-title">Мерчандайзинг FMCG, Beauty, DIY</div>
+                        <div class="four-txt-pic-txt-el-txt">
+                            Никаких агентств на подряде, только собственные штатные сотрудники по всей России.
+                            Оперативно выполняем задачи и предоставляем прозрачную электронную отчётность, адаптированную под Вас.
+                        </div>
+                    </div>
+                    <div class="four-txt-pic-txt-el">
+                        <div class="four-txt-pic-txt-el-title">Аутсорсинг и аутстаффинг персонала</div>
+                        <div class="four-txt-pic-txt-el-txt">
+                            Мы подбираем оптимальный вариант оформления сотрудников, рассчитываем региональные ставки и
+                            полностью берём на себя поиск, отбор и формирование команды.
+                        </div>
+                    </div>
+                    <div class="four-txt-pic-txt-el">
+                        <div class="four-txt-pic-txt-el-title">Retail аудит и мониторинг</div>
+                        <div class="four-txt-pic-txt-el-txt">
+                            Вы получить точную информацию о состоянии Вашего продукта на полке и активности конкурентов.
+                            Мы покажем, как ваша стратегия работает в реальных условиях рынка и выявим зоны роста.
+                        </div>
+                    </div>
+                    <div class="four-txt-pic-txt-el">
+                        <div class="four-txt-pic-txt-el-title">Технический мерчандайзинг</div>
+                        <div class="four-txt-pic-txt-el-txt">
+                            Технический мерчандайзинг и размещение POSm позволяет максимально выделить Вашу продукцию среди
+                            конкурентов и эффектно представить ваш бренд в магазине.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="four-txt-pic-right">
+                <img src="/static/imgs/service-comp/audit.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+
+<section class="grid-nets medium-bg">
+    <div class="container">
+        <hr class="title-line" />
+        <h1 class="fs-title">
+            Сети в которых мы уже работаем
+        </h1>
+        <div class="grid-nets-wrap">
+            <div class="grid-nets-el"><img src="/static/nets_logos/ashan.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-diksi.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-magnit.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-okey.jpg" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-perekrestok.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-pyatyorochka.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/roznitsa-metro.jpg" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/lenta_logo.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/atak-logo.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/vernij.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/globus.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/spar.png" alt=""></div>
+        </div>
+    </div>
+</section>
+
+<section class="full-screen vertical-margin">
+	<div class="fs-block">
+        <img src="/static/imgs/about-unic.jpg" alt="">
+        <div class="fs-title-padding">
+            <hr class="title-line" />
+            <h2 class="fs-title">Наша уникальность</h2>
+        </div>
+    </div>
+	<div class="fs-block">
+        <ul class="fs-list">
+            <li class="fs-list-el">
+                Бесплатная для Вас иновационная онлайн-платформа для контроля персонала с геолокацией всех магазинов.
+            </li>
+            <li class="fs-list-el">
+                Понимаем большую разницу между каналами FMCG, beauty и DIY. Разные направления - разный персонал и индивидуальный подход к товарным категориям.
+            </li>
+            <li class="fs-list-el">
+                Работаем только со своими командами полевых сотрудников во всех городах РФ - нет задержек в реакции, потерь качества и бюрократии.
+
+            </li>
+            <li class="fs-list-el">
+                Все наши мерчендайзеры проходят обучение по продукту, работают по системе KPI, имеют опыт работы в ритэйле 2+ года, оформлены согласно законодательству РФ.
+            </li>
+            <li class="fs-list-el">
+                Поможем забыть про постоянную ротацию персонала, нехватку сотрудников, проблемы с поиском и отбором, пустующие торговые точки и провалы с продажами.
+            </li>
+        </ul>
+	</div>
+</section>
+
+
+{% endblock %}

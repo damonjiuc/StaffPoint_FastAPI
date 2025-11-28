@@ -1,0 +1,171 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" lang="ru" content="Профессиональное обучение торгового персонала и мерчандайзеров от Staff Point. Индивидуальные программы, тренинги по продукту и продажам, развитие навыков для роста продаж.">
+    <meta name="keywords" content="обучение торгового персонала, обучение мерчандайзеров, тренинги по продажам, обучение консультантов, Staff Point, развитие персонала, обучение продавцов">
+    <title>Услуги мониторинга товаров в магазинах — Staff Point</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+    <div class="container">
+        <div class="hero-title">
+            <h1>
+                <b>Staff P<span class="accent-color">o</span>int<br/></b>
+                Мониторинг товаров в магазинах<br/>
+                {{ region.insert if region }}
+            </h1>
+        </div>
+        <div class="hero-txt">
+            <p>
+               Эта услуга позволит Вам получить своевременную и точную информацию о состоянии Вашего продукта на полке: наличие,
+                цена, выкладка и расположение, активности конкурентов.
+            </p>
+            <p>Все это позволит Вам увидеть реальную картину Вашего бизнеса в торговых точках: соответствие стандартам
+                мерчандайзинга, корректность промо, качество размещения и динамику продаж.</p>
+            <p>
+                Вы получаете инструменты для корректировки Ваших действий, повышаете уровень контроля, определяете возможные точки роста.
+            </p>
+        </div>
+    </div>
+    <div class="hero-video-dimmer"></div>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/static/background.mp4" type="video/mp4">
+    </video>
+</div>
+
+<section class="service-comp first-section">
+    <div class="container">
+        <h2>Что входит в услуги мониторинга товаров в магазинах {{ region.insert if region }}</h2>
+        <div class="section-subtitle">
+            Мы возьмем на себя все, что касается сбора информации
+        </div>
+        <div class="service-comp-wrap">
+            <ul class="service-comp-list">
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Ценовой мониторинг</h4>
+                    <div class="service-comp-txt">
+                        Фиксируем цену товара и акционую цену, корректность размещения ценников и их наличие, производим анализ
+                        в соответствии с позициями конкурентов.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Наличие товара</h4>
+                    <div class="service-comp-txt">
+                        Оцениваем соответствие планограмме, фиксируем количество товара на поле и складе, определяем out-of-stock
+                        или угрозу возникновения.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Мониторинг POSm и промо оборудования</h4>
+                    <div class="service-comp-txt">
+                        Проверяем наличие, корректность установки, состояние и чистоту рекламного оборудования. Фиксируем место
+                        размещения и видимость.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Фотоотчет и контроль</h4>
+                    <div class="service-comp-txt">
+                        Каждая проверка сопровождается подробной и четкой фотофиксацией, что позволяет определить количество
+                        фейсов каждого SKU, уровень размещения и видимости продукта.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">On-line отчетность</h4>
+                    <div class="service-comp-txt">
+                        Результаты проверок передаются через удобную on-line платформу — вы можете отслеживать исполнение услуги
+                        и показатели качества сервиса в реальном времени.
+                    </div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Анализ</h4>
+                    <div class="service-comp-txt">
+                        Проводим подробный анализ с выявлением точек роста для Вашего продукта. Предоставляем конкретные
+                        предложения по увеличению продаж и расширению представленности Вашего бренда.
+                    </div>
+                </li>
+            </ul>
+            <div class="service-comp-img" id="service-comp-img-learning"></div>
+        </div>
+    </div>
+</section>
+
+<section class="adv">
+    <div class="container">
+        <h2>В чем наша уникальность?</h2>
+        <ul class="adv-list">
+            <li class="adv-el">
+                <h4 class="adv-title">On-line отчетность</h4>
+                <div class="adv-icons-txt">
+                    Безплатная для вас технологичная и передовая CRM платформа для получения фотографий и любых отчетов из
+                    магазинов. Удобный конструктор позволит создать чек лист именно под Ваши задачи и объединить все отчеты
+                    в подходящую форму.
+                </div>
+            </li>
+            <li class="adv-el">
+                <div class="adv-title">Ни одного агентства на подряде</div>
+                <div class="adv-txt">
+                    Оказываем услугу силами только собственных штатных сотрудников во всех городах РФ - нет задержек в реакции,
+                    потерь качества и бюрократии.
+                </div>
+            </li>
+            <li class="adv-el">
+                <div class="adv-title">Покрытие по всей РФ</div>
+                <div class="adv-txt">
+                    Присутствие во всех городах России. Все федеральные и локальные торговые сети на обслуживании. Сотни
+                    успешно реализованных проектов в каналах FMCG, beauty, DIY.
+                </div>
+            </li>
+            <li class="adv-el">
+                <div class="adv-title">Расширение полочного пространства</div>
+                <div class="adv-txt">
+                    Предоставим не просто мониторинг и сухой отчет.  Наглядно покажем возможности по расширению представленности
+                    Вашего продукта и возможные точки роста.
+                </div>
+            </li>
+            <li class="adv-el">
+                <div class="adv-title">Персонал на проекте</div>
+                <div class="adv-txt">
+                    Все наши специалисты по мониторингу прошли большой путь в  мерчандайзинге и понимают разницу в подходе к
+                    продуктам питания, косметическим или строительным товарам.
+                </div>
+            </li>
+            <li class="adv-el">
+                <div class="adv-title">20+ лет опыта</div>
+                <div class="adv-txt">
+                    Мы знаем и умеем искать товар на складе, считать остатки, проверять ценники и планограммы, делать четкие
+                    фотоснимки. Понимаем, что такое рекламное оборудование и как с ним работать.
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="grid-nets medium-bg">
+    <div class="container">
+        <h2>Сети в которых мы уже работаем</h2>
+        <div class="grid-nets-wrap">
+            <div class="grid-nets-el"><img src="/static/nets_logos/ashan.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-diksi.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-magnit.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-okey.jpg" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-perekrestok.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-pyatyorochka.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/roznitsa-metro.jpg" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/lenta_logo.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/atak-logo.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/vernij.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/globus.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/spar.png" alt=""></div>
+        </div>
+    </div>
+</section>
+
+{% include 'main/_feedback_form.html' %}
+
+{% endblock %}
