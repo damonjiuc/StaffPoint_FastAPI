@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://staffpoint.ru/static/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     {% block style %}{% endblock %}
-    <meta property="og:image" content="/static/staffpoint-logo.png">
+    {% if region %}
+        <meta name="robots" content="noindex, follow">
+    {% else %}
+        <meta name="robots" content="index, follow">
+    {% endif %}
+    <meta property="og:image" content="https://staffpoint.ru/static/staffpoint-logo.png">
     {% block meta %}{% endblock %}
 </head>
 <body>

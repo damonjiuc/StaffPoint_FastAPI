@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block meta %}
+    {% include 'jsonld/merch.html' %}
     <meta name="description" lang="ru" content="Мерчандайзинг товаров в магазинах {{ region.insert if region }} от Staff Point. Профессиональная выкладка, фотоотчёты, контроль и аналитика продаж. 20+ лет опыта и более 350 городов обслуживания!" />
     <meta name="keywords" content="мерчандайзинг {{ region.insert if region }}, мерчандайзинг товаров {{ region.insert if region }}, услуги мерчандайзинга, выкладка товаров {{ region.insert if region }}, Staff Point" />
     <title>Мерчандайзинг товаров в магазинах {{ region.insert if region }} — Staff Point</title>
@@ -45,7 +46,7 @@
         <div class="section-subtitle">До того, как мы <b>подберем</b> для Вас <b>подходящую программу мерчендайзинга</b>, Мы <b>ответим на</b> Ваши самые <b>главные вопросы</b></div>
         <ul class="adv-icons-list">
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_shop.png" alt="" title="">
+                <img src="/static/icons/icon_shop.png" alt="Иконка мерчандайзинг - магазин">
                 <h4 class="adv-icons-title"></h4>
                 <div class="adv-icons-txt">
                     Понимаем разницу между каналами FMCG, beauty и DIY. Разные направления - разный персонал и
@@ -53,7 +54,7 @@
                 </div>
             </li>
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_stand.png" alt="" title="">
+                <img src="/static/icons/icon_stand.png" alt="Иконка мерчандайзинг - стойка">
                 <div class="adv-icons-title"></div>
                 <div class="adv-icons-txt">
                     Как согласовать и поставить в федеральных торговых сетях паллет с продукцией или торговую стойку с большим
@@ -61,7 +62,7 @@
                 </div>
             </li>
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_raise.png" alt="" title="">
+                <img src="/static/icons/icon_raise.png" alt="Иконка мерчандайзинг - рост">
                 <div class="adv-icons-title"></div>
                 <div class="adv-icons-txt">
                     Как увеличить квант заказа в магазинах с жесткой системой автозаказов. Мы определим угрозы возникновения
@@ -69,7 +70,7 @@
                 </div>
             </li>
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_shelf.png" alt="" title="">
+                <img src="/static/icons/icon_shelf.png" alt="Иконка мерчандайзинг - полка">
                 <div class="adv-icons-title"></div>
                 <div class="adv-icons-txt">
                     Как добиться большей представленности по «фейсам» на полке, чем у ваших конкурентов. Предоставим возможности
@@ -77,7 +78,7 @@
                 </div>
             </li>
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_4hands.png" alt="" title="">
+                <img src="/static/icons/icon_4hands.png" alt="Иконка мерчандайзинг - персонал">
                 <div class="adv-icons-title"></div>
                 <div class="adv-icons-txt">
                     Как забыть про постоянную ротацию персонала, нехватку сотрудников, проблемы с поиском и отбором, пустующие
@@ -85,7 +86,7 @@
                 </div>
             </li>
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_guy_hand.png" alt="" title="">
+                <img src="/static/icons/icon_guy_hand.png" alt="Иконка мерчандайзинг - сотрудник">
                 <div class="adv-icons-title"></div>
                 <div class="adv-icons-txt">
                     Поможем разобраться и вместе оценим - какой персонал вам нужен. Мерчендайзер или все же продавец-консультант.
@@ -208,18 +209,18 @@
     <div class="container">
         <h2>Сети в которых мы уже работаем</h2>
         <div class="grid-nets-wrap">
-            <div class="grid-nets-el"><img src="/static/nets_logos/ashan.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/logo-diksi.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/logo-magnit.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/logo-okey.jpg" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/logo-perekrestok.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/logo-pyatyorochka.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/roznitsa-metro.jpg" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/lenta_logo.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/atak-logo.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/vernij.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/globus.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/spar.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/ashan.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Ашан"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-diksi.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Дикси"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-magnit.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Магнит"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-okey.jpg" alt="Лого сети, в которой мы делаем мерчандайзинг - Окей"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-perekrestok.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Перекресток"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-pyatyorochka.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Пятерочка"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/roznitsa-metro.jpg" alt="Лого сети, в которой мы делаем мерчандайзинг - Метро"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/lenta_logo.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Лента"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/atak-logo.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Atak"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/vernij.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Верный"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/globus.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Глобус"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/spar.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Спар"></div>
         </div>
     </div>
 </section>

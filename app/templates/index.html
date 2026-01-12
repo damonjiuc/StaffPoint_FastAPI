@@ -5,9 +5,11 @@
 {% endblock %}
 
 {% block meta %}
-    <meta name="description" lang="ru" content="Агентство мерчандайзинга Staff Point! ✔Услуги мерчандайзинга {{ region.insert if region}}! ✔Услуги аутстаффинга {{ region.insert if region}}! ➤➤У нас Вы можете заказать мерчандайзинг, аутстаффинг персонала, тайного покупателя {{ region.insert if region}}! ➤20+ лет на рынке! 350+ города на обслуживании!" />
-    <meta name="keywords" content="Агентство мерчандайзинга {{ region.insert if region}}, Услуги мерчандайзинга {{ region.insert if region}}, улуги выкладки товаров {{ region.insert if region}}, услуги аутсорсинга {{ region.insert if region}}, технический мерчандайзинг {{ region.insert if region}}, размещение POSM {{ region.insert if region}}" />
-    <title>Услуги мерчандайзнга {{ region.insert if region}} - Staff Point</title>
+    {% include 'jsonld/main-organization.html' %}
+    <meta name="description" lang="ru" content="Мерчандайзинг агентство Staff Point — Мерчандайзинг услуги, аутсорсинг и аутстаффинг полевого персонала {{ region.insert if region }}. Выкладка товаров, аудит торговых точек, размещение POSM, контроль качества и отчётность. Работаем по всей России.">
+    <meta name="keywords" content="мерчандайзинг агентство {{ region.insert if region}}, Мерчандайзинг услуги, услуги мерчандайзинга {{ region.insert if region}}, аутсорсинг мерчандайзинга {{ region.insert if region}}, аутстаффинг персонала {{ region.insert if region}}, выкладка товаров, аудит торговых точек, POSM, Staff Point">
+    <title>Мерчандайзинг агентство Staff Point — Мерчандайзинг услуги {{ region.insert if region }}</title>
+    <meta name="yandex-verification" content="6297c7baa1eb14d5" />
 {% endblock %}
 
 {% block content %}
@@ -16,7 +18,7 @@
         <div class="hero-logo">
             <h1>
                 <b>Staff P<span class="accent-color">o</span>int<br/></b>
-                Мерчандайзинговое агентство<br/>
+                Мерчандайзинг агентство<br/>
                 {{ region.insert if region}}
             </h1>
         </div>
@@ -74,29 +76,29 @@
 <section>
     <div class="swiper container nets-swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/static/nets_logos/ashan.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/logo-diksi.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/logo-magnit.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/logo-okey.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/logo-perekrestok.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/logo-pyatyorochka.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/roznitsa-metro.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/lenta_logo.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/atak-logo.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/vernij.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/globus.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/spar.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/lemana.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/Detskij-mir.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/kari.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/4lapy.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/bethowen.svg" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/beauty/rg.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/beauty/letual.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/beauty/zya.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/beauty/mc.webp" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/beauty/podruzhka.png" alt=""></div>
-            <div class="swiper-slide"><img src="/static/nets_logos/leonardo.png" alt=""></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/ashan.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Ашан"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/logo-diksi.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Дикси"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/logo-magnit.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Магнит"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/logo-okey.jpg" alt="Лого сети, в которой мы делаем мерчандайзинг - Окей"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/logo-perekrestok.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Перекресток"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/logo-pyatyorochka.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Пятерочка"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/roznitsa-metro.jpg" alt="Лого сети, в которой мы делаем мерчандайзинг - Метро"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/lenta_logo.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Лента"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/atak-logo.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Atak"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/vernij.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Верный"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/globus.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Глобус"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/spar.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Спар"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/lemana.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Лемана"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/Detskij-mir.jpg" alt="Лого сети, в которой мы делаем мерчандайзинг - Детский мир"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/kari.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Кари"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/4lapy.jpg" alt="Лого сети, в которой мы делаем мерчандайзинг - 4 лапы"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/bethowen.svg" alt="Лого сети, в которой мы делаем мерчандайзинг - Бетховен"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/beauty/rg.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Рив Гош"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/beauty/letual.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Лэтуаль"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/beauty/zya.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Золотое яблоко"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/beauty/mc.webp" alt="Лого сети, в которой мы делаем мерчандайзинг - Магнит Косметик"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/beauty/podruzhka.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Подружка"></div>
+            <div class="swiper-slide"><img src="/static/nets_logos/leonardo.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Леонардо"></div>
         </div>
     </div>
 
@@ -121,17 +123,17 @@
             <a id="services-el-placement" href="{{ url_for_service('posm-placement', region) }}" class="services-el">
                 <h3>Технический мерчандайзинг<br />Установка торгового оборудования<br />(Размещение POSM)<br />{{ region.insert if region}}</h3>
             </a>
-            <a id="services-el-learning" href="{{ url_for_service('learning', region) }}" class="services-el">
+            <a id="services-el-learning" href="{{ url_for_service('monitoring', region) }}" class="services-el">
                 <h3>Мониторинг в магазинах<br />{{ region.insert if region}}</h3>
             </a>
             <a id="services-el-audit" href="{{ url_for_service('audit', region) }}" class="services-el">
-                <h3>Аудит торговых точек<br />(мерчандайзинга)<br />{{ region.insert if region}}</h3>
+                <h3>Аудит мерчандайзинга <br />торговых точек<br />{{ region.insert if region}}</h3>
             </a>
             <a id="services-el-mystery" href="{{ url_for_service('mystery', region) }}" class="services-el">
-                <h3>Таинственный покупатель<br />{{ region.insert if region}}</h3>
+                <h3>Тайный покупатель<br />{{ region.insert if region}}</h3>
             </a>
             <a id="services-el-outsource-staff" href="{{ url_for_service('outsource-staff', region) }}" class="services-el">
-                <h3>Аутсорсинг персонала<br />{{ region.insert if region}}</h3>
+                <h3>Аутсорсинг мерчандайзинга<br />{{ region.insert if region}}</h3>
             </a>
             <!--
             <a id="services-el-tech" href="{{ url_for_service('merch-tech', region) }}" class="services-el">
@@ -155,32 +157,32 @@
         <h3>Staff Point - это:</h3>
         <ul class="adv-icons-list">
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_comp.png" alt="" title="">
+                <img src="/static/icons/icon_comp.png" alt="On-line отчетность">
                 <h4 class="adv-icons-title">On-line отчетность</h4>
                 <div class="adv-icons-txt">Бесплатная для Вас иновационная онлайн-платформа для контроля персонала с геолокацией всех магазинов. Конструктор отчетов позволит Вам собирать только нужные данные</div>
             </li>
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_lamp.png" alt="" title="">
+                <img src="/static/icons/icon_lamp.png" alt="20+ лет опыта">
                 <div class="adv-icons-title">20+ лет опыта</div>
                 <div class="adv-icons-txt">Понимаем большую разницу между каналами FMCG, beauty и DIY. Разные направления - разный персонал и индивидуальный подход к товарным категориям.</div>
             </li>
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_agency.png" alt="" title="">
+                <img src="/static/icons/icon_agency.png" alt="Ни одного агентства на подряде">
                 <div class="adv-icons-title">Ни одного агентства на подряде</div>
                 <div class="adv-icons-txt">Работаем только со своими командами полевых сотрудников во всех городах РФ - нет задержек в реакции, потерь качества и бюрократии.</div>
             </li>
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_learn.png" alt="" title="">
+                <img src="/static/icons/icon_learn.png" alt="Персонал">
                 <div class="adv-icons-title">Персонал</div>
                 <div class="adv-icons-txt">Все наши мерчендайзеры проходят обучение по продукту, работают по системе KPI, имеют опыт работы в ритэйле 2+ года, оформлены согласно законодательству РФ.</div>
             </li>
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_map.png" alt="" title="">
+                <img src="/static/icons/icon_map.png" alt="Покрытие">
                 <div class="adv-icons-title">Покрытие</div>
                 <div class="adv-icons-txt">Поможем забыть про постоянную ротацию персонала, нехватку сотрудников, проблемы с поиском и отбором, пустующие торговые точки и провалы с продажами.</div>
             </li>
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_control.png" alt="" title="">
+                <img src="/static/icons/icon_control.png" alt="Контроль">
                 <div class="adv-icons-title">Контроль</div>
                 <div class="adv-icons-txt">Система собственного внутреннего аудита нашего агентства позволяет контролировать все этапы проекта, предупреждать негативные события и избегать рисков.</div>
             </li>

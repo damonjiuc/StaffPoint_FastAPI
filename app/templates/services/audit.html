@@ -5,9 +5,10 @@
 {% endblock %}
 
 {% block meta %}
-    <meta name="description" lang="ru" content="Аудит торговых точек и мерчандайзинга от Staff Point. Проверка стандартов выкладки, наличие товара, размещение POSM и контроль работы полевого персонала.">
-    <meta name="keywords" content="аудит торговых точек, аудит мерчандайзинга, проверка выкладки, контроль POSM, фотоотчет, Staff Point, аудит полевого персонала">
-    <title>Аудит торговых точек и мерчандайзинга — Staff Point</title>
+    {% include 'jsonld/audit.html' %}
+    <meta name="description" lang="ru" content="Аудит мерчандайзинга торговых точек от Staff Point — проверка стандартов выкладки, наличия товара, размещения POSM и работы полевого персонала с фотоотчётами и аналитикой.">
+    <meta name="keywords" content="аудит мерчандайзинга торговых точек, аудит мерчандайзинга, аудит торговых точек, проверка выкладки, POSM, фотоотчет, Staff Point">
+    <title>Аудит мерчандайзинга торговых точек {{ region.insert if region }} — Staff Point</title>
 {% endblock %}
 
 
@@ -17,7 +18,7 @@
         <div class="hero-title">
             <h1>
                 <b>Staff P<span class="accent-color">o</span>int<br/></b>
-                Аудит торговых точек и мерчандайзинга<br/>
+                Аудит мерчандайзинга торговых точек<br/>
                 {{ region.insert if region }}
             </h1>
         </div>
@@ -35,7 +36,7 @@
 
 <section class="service-comp first-section">
     <div class="container">
-        <h2>Что входит в аудит торговых точек {{ region.insert if region }}</h2>
+        <h2>Что входит в услугу аудита мерчандайзинга {{ region.insert if region }}</h2>
         <div class="section-subtitle">
             Мы <b>контролируем качество</b> представления вашего бренда в торговом пространстве
         </div>

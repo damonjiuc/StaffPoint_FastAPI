@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block meta %}
+    {% include 'jsonld/about.html' %}
     <meta name="description" lang="ru" content="Агентство мерчандайзинга Staff Point! ✔Услуги мерчандайзинга {{ region.insert if region}}! ✔Услуги аутстаффинга {{ region.insert if region}}! ➤➤У нас Вы можете заказать мерчандайзинг, аутстаффинг персонала, тайного покупателя {{ region.insert if region}}! ➤20+ лет на рынке! 350+ города на обслуживании!" />
     <meta name="keywords" content="Агентство мерчандайзинга {{ region.insert if region}}, Услуги мерчандайзинга {{ region.insert if region}}, улуги выкладки товаров {{ region.insert if region}}, услуги аутсорсинга {{ region.insert if region}}, технический мерчандайзинг {{ region.insert if region}}, размещение POSM {{ region.insert if region}}" />
     <title>Услуги мерчандайзнга {{ region.insert if region}} - Staff Point</title>
@@ -50,7 +51,7 @@
 
 <section class="full-screen vertical-margin">
 	<div class="fs-block">
-        <img src="/static/imgs/about-mission.jpg" alt="">
+        <img src="/static/imgs/about-mission.jpg" alt="Агентство мерчандайзинга Staff Point, миссия, фон">
         <div class="fs-title-padding">
             <hr class="title-line" />
             <h2 class="fs-title">Наша миссия</h2>
@@ -125,7 +126,7 @@
         </div>
 	</div>
 	<div class="fs-block-s">
-        <img src="/static/imgs/service-comp/audit.jpg" alt="">
+        <img src="/static/imgs/service-comp/audit.jpg" alt="Агентство мерчандайзинга Staff Point, направления работы, фон">
     </div>
 </section>
 
@@ -192,25 +193,37 @@
             Сети в которых мы уже работаем
         </h1>
         <div class="grid-nets-wrap">
-            <div class="grid-nets-el"><img src="/static/nets_logos/ashan.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/logo-diksi.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/logo-magnit.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/logo-okey.jpg" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/logo-perekrestok.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/logo-pyatyorochka.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/roznitsa-metro.jpg" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/lenta_logo.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/atak-logo.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/vernij.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/globus.png" alt=""></div>
-            <div class="grid-nets-el"><img src="/static/nets_logos/spar.png" alt=""></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/ashan.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Ашан"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-diksi.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Дикси"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-magnit.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Магнит"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-okey.jpg" alt="Лого сети, в которой мы делаем мерчандайзинг - Окей"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-perekrestok.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Перекресток"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/logo-pyatyorochka.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Пятерочка"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/roznitsa-metro.jpg" alt="Лого сети, в которой мы делаем мерчандайзинг - Метро"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/lenta_logo.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Лента"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/atak-logo.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Atak"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/vernij.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Верный"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/globus.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Глобус"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/spar.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Спар"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/lemana.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Лемана"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/vseinstrumenti.jpg" alt="Лого сети, в которой мы делаем мерчандайзинг - Все интсрументы ру"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/Detskij-mir.jpg" alt="Лого сети, в которой мы делаем мерчандайзинг - Детский мир"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/kari.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Кари"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/4lapy.jpg" alt="Лого сети, в которой мы делаем мерчандайзинг - 4 лапы"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/bethowen.svg" alt="Лого сети, в которой мы делаем мерчандайзинг - Бетховен"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/beauty/rg.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Рив Гош"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/beauty/letual.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Лэтуаль"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/beauty/zya.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Золотое яблоко"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/beauty/mc.webp" alt="Лого сети, в которой мы делаем мерчандайзинг - Магнит Косметик"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/beauty/podruzhka.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Подружка"></div>
+            <div class="grid-nets-el"><img src="/static/nets_logos/leonardo.png" alt="Лого сети, в которой мы делаем мерчандайзинг - Леонардо"></div>
         </div>
     </div>
 </section>
 
 <section class="full-screen vertical-margin">
 	<div class="fs-block">
-        <img src="/static/imgs/about-unic.jpg" alt="">
+        <img src="/static/imgs/about-unic.jpg" alt="Агентство мерчандайзинга Staff Point, уникальность, фон">
         <div class="fs-title-padding">
             <hr class="title-line" />
             <h2 class="fs-title">Наша уникальность</h2>

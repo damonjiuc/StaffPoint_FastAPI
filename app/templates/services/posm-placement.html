@@ -5,7 +5,8 @@
 {% endblock %}
 
 {% block meta %}
-    <title>Технический мерчандайзинг (установка торгового оборудования и размещение POSM) — Staff Point</title>
+    {% include 'jsonld/posm-placement.html' %}
+    <title>Технический мерчандайзинг (установка торгового оборудования и размещение POSM) {{ region.insert if region }} — Staff Point</title>
     <meta name="description" content="Профессиональный технический мерчандайзинг от Staff Point. Установка и обслуживание рекламного оборудования, монтаж POSM и контроль размещения в торговых точках.">
     <meta name="keywords" content="технический мерчандайзинг, установка рекламного оборудования, монтаж POSM, установка витрин, обслуживание оборудования, Staff Point, монтаж в магазинах">
 {% endblock %}
@@ -41,7 +42,7 @@
 
 <section class="service-comp first-section">
     <div class="container">
-        <h2>Что входит в услугу установки торгового оборудования {{ region.insert if region }}</h2>
+        <h2>Что входит в услугу технического мерчандайзинга {{ region.insert if region }}</h2>
         <div class="section-subtitle">Мы <b>берем на себя все</b>, что касается размещения POSM в торговых точках</div>
         <div class="service-comp-wrap">
             <ul class="service-comp-list">

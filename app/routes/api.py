@@ -20,7 +20,7 @@ async def send_feedback(form: Feedback):
     """
 
     await send_email(
-        to_email="f.kerov@staffpoint.ru",
+        to_email="damonjiuc@gmail.com",
         subject="Новое обращение с сайта",
         message_html=html,
         message_text=form.message

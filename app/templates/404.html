@@ -1,0 +1,34 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block meta %}
+    <title>Страница не найдена — 404 — Staff Point</title>
+    <meta name="robots" content="noindex, follow">
+{% endblock %}
+
+{% block content %}
+
+<section class="full-screen">
+	<div class="fs-block-s">
+        <img src="/static/imgs/contacts.jpg" alt="">
+    </div>
+	<div class="fs-block-l">
+        <div class="fs-txt">
+            <div class="fs-title">
+                <hr class="title-line" />
+                <h2 class="fs-title">404 — страница не найдена</h2>
+            </div>
+            <div class="hero-contacts">
+                <div class="contacts-el">
+                    <p>Адрес <strong>{{ path }}</strong> не существует.</p>
+                </div>
+            </div>
+        </div>
+	</div>
+</section>
+
+
+{% endblock %}

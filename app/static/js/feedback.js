@@ -6,7 +6,12 @@ function initFeedbackForm(formId = 'feedback-form') {
 
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        form.querySelectorAll(".error").forEach(el => el.remove());
+
+        // Удаляем старые ошибки
+        const errorsBox = form.querySelector(".form-feedback-errors");
+        errorsBox.innerHTML = "";
+
+        errorsBox.style.display = "none";
 
         const data = Object.fromEntries(new FormData(form).entries());
 
@@ -25,22 +30,31 @@ function initFeedbackForm(formId = 'feedback-form') {
         const result = await response.json();
 
         if (!response.ok) {
+
+            // Если есть detail → ошибки валидации FastAPI/Pydantic
             if (result.detail) {
                 result.detail.forEach(err => {
-                    const field = err.loc.at(-1);
-                    const input = form.querySelector(`[name="${field}"]`);
-                    if (input) {
-                        const div = document.createElement("div");
-                        div.className = "error";
-                        div.textContent = err.msg;
-                        input.parentNode.appendChild(div);
-                    }
+                    // Показываем контейнер
+                    errorsBox.style.display = "block";
+
+                    const div = document.createElement("div");
+                    div.className = "error";
+                    div.textContent = err.msg.replace(/^Value error,\s*/i, "");
+                    errorsBox.appendChild(div);
                 });
             } else {
-                alert("Ошибка при отправке данных");
+                // Непредвиденная ошибка сервера
+                const div = document.createElement("div");
+                div.className = "error";
+                div.textContent = "Ошибка при отправке данных";
+                errorsBox.appendChild(div);
             }
+
             return;
         }
+
+        ym(105557919,'reachGoal','feedback_sent');
+        console.log("Метрика: цель feedback_sent отправлена");
 
         showMessage(result.message || "Ваша заявка отправлена, мы обязательно с Вами свяжемся!");
 
@@ -59,10 +73,6 @@ function initFeedbackForm(formId = 'feedback-form') {
             requestAnimationFrame(() => {
                 successDiv.classList.add("visible");
             });
-
-            // 4. Высоту формы оставляем зафиксированной (не меняем)
-            // Если захочешь, можно позже сбросить height в auto
-            // form.style.height = 'auto';
         }
     });
 }

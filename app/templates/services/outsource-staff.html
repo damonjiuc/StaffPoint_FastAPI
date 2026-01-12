@@ -5,9 +5,10 @@
 {% endblock %}
 
 {% block meta %}
-    <meta name="description" lang="ru" content="Аутсорсинг полевого персонала от Staff Point — подбор, оформление и сопровождение мерчандайзеров, аудиторов, торговых представителей по всей России. Мы берём на себя HR и документооборот, а вы управляете командой.">
-    <meta name="keywords" content="аутсорсинг персонала, аутстаффинг мерчандайзеров, аутсорсинг торгового персонала, подбор полевых сотрудников, Staff Point, мерчандайзинг персонал">
-    <title>Аутсорсинг персонала {{ region.insert if region }} — Staff Point</title>
+    {% include 'jsonld/outsource-staff.html' %}
+    <meta name="description" lang="ru" content="Аутсорсинг мерчандайзинга и полевого персонала от Staff Point — подбор, оформление и управление мерчандайзерами, аудиторами и торговыми представителями по всей России. Берём на себя HR и документооборот.">
+    <meta name="keywords" content="аутсорсинг мерчандайзинга, аутсорсинг полевого персонала, мерчандайзинг аутсорсинг, полевой персонал, мерчандайзеры, Staff Point">
+    <title>Аутсорсинг мерчандайзинга и полевого персонала {{ region.insert if region }} — Staff Point</title>
 {% endblock %}
 
 {% block content %}
@@ -16,7 +17,7 @@
         <div class="hero-title">
             <h1>
                 <b>Staff P<span class="accent-color">o</span>int<br/></b>
-                Аутсорсинг и аутстаффинг персонала<br/>
+                Аутсорсинг мерчандайзинга и полевого персонала<br/>
                 {{ region.insert if region }}
             </h1>
         </div>
@@ -25,7 +26,7 @@
                 Мы <b>более 20 лет создаем успешные команды по мерчандайзингу</b>, мониторингу и аудиту.
                 Если вы задумываетесь о собственных полевых сотрудниках, но не хотите тратить ресурсы на их подбор, оформление и сопровождение — мы возьмем это все на себя.
             </p>
-            <p><b>Вы управляете — мы предоставляем стабильную команду  и ведение КДП.</b></p>
+            <p><b>Вы управляете — мы предоставляем стабильную команду и ведение КДП.</b></p>
             <p>
                 Staff Point подбирает и оформляет персонал под ваши задачи, а контроль, постановка задач и управление остаются
                 полностью на вашей стороне. Это оптимальное решение для компаний, которым важно качество и прозрачность
@@ -41,31 +42,31 @@
 
 <section class="adv-icons">
     <div class="container">
-        <h2>Мы знаем об аустаффинге все!</h2>
-        <div class="section-subtitle">До того, как мы <b>подберем</b> для Вас <b>подходящую программу по аутстаффингу</b>, Мы <b>ответим на</b> Ваши самые <b>главные вопросы</b></div>
+        <h2>Мы знаем об аутсорсинге все!</h2>
+        <div class="section-subtitle">До того, как мы <b>подберем</b> для Вас <b>подходящую программу по аутсорсингу</b>, Мы <b>ответим на</b> Ваши самые <b>главные вопросы</b></div>
         <ul class="adv-icons-list">
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_cash.png" alt="" title="">
+                <img src="/static/icons/icon_cash.png" alt="Иконка аутсорс - рост доходов">
                 <div class="adv-icons-txt">Как существенно сократить расходы на содержание собственной полевой команды, не уменьшая количество персонала.</div>
             </li>
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_guys.png" alt="" title="">
+                <img src="/static/icons/icon_guys.png" alt="Иконка аутсорс - команда">
                 <div class="adv-icons-txt">Как создать свою собственную полноценную команду, минимизировать бюджет, но сохранить полный контроль и управление людьми и полностью влиять на свои продажи.</div>
             </li>
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_4hands.png" alt="" title="">
+                <img src="/static/icons/icon_4hands.png" alt="Иконка аутсорс - персонал">
                 <div class="adv-icons-txt">Как забыть про постоянную ротацию персонала, нехватку сотрудников, проблемы с поиском и отбором, пустующие торговые точки и провалы с продажами. </div>
             </li>
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_map.png" alt="" title="">
+                <img src="/static/icons/icon_map.png" alt="Иконка аутсорс - карта">
                 <div class="adv-icons-txt">Как определить оптимальную ЗП полевых сотрудников, исходя из региональной специфики.</div>
             </li>
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_guy_hand.png" alt="" title="">
+                <img src="/static/icons/icon_guy_hand.png" alt="Иконка аутсорс - сотрудник">
                 <div class="adv-icons-txt">Поможем разобраться и вместе оценим - какой персонал вам нужен. Мерчендайзер или все же продавец-консультант</div>
             </li>
             <li class="adv-icons-el">
-                <img src="/static/icons/icon_route.png" alt="" title="">
+                <img src="/static/icons/icon_route.png" alt="Иконка аутсорс - маршрут">
                 <div class="adv-icons-txt">Как составить оптимальные маршруты для исполнителей, если проект предусматривает визитное посещение нескольких магазинов.</div>
             </li>
         </ul>
@@ -75,7 +76,7 @@
 
 <section class="service-comp medium-bg">
     <div class="container">
-        <h2>Что входит в аутсорсинг персонала {{ region.insert if region }}</h2>
+        <h2>Что входит в аутсорсинг мерчандайзинга и полевого персонала {{ region.insert if region }}</h2>
         <div class="section-subtitle">
             Мы <b>берем на себя все:</b> HR-процессы, оформление и сопровождение полевых сотрудников
         </div>

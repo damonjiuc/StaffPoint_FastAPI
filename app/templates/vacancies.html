@@ -1,0 +1,292 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block meta %}
+    {% include 'jsonld/vacancies.html' %}
+    <meta name="description" lang="ru" content="Агентство мерчандайзинга STAFFpoint, вакансии!" />
+    <meta name="keywords" content="Вакансии STAFFpoint" />
+    <title>Вакансии - Staff Point</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+    <div class="container">
+        <div class="hero-title">
+            <h1>
+                <b>Staff P<span class="accent-color">o</span>int<br/></b>
+                Вакансии
+            </h1>
+        </div>
+        <div class="hero-txt">
+            <p>
+                Мы ждём Вас! Присоединяйтесь к нашей большой и дружной семье уже Сегодня.
+            </p>
+            <p>
+                Вы только начинаете свой трудовой путь или решили сменить род своих занятий - не сомневайтесь! В нашей компании Вы получите четкие инструкции и советы как начать зарабатывать уже сегодня.
+            </p>
+            <p>
+                Вы опытный сотрудник и ищете подработку или новую работу? Мы Вас заждались! Возьмите себе магазинов столько, сколько сможете.
+            </p>
+            <p>
+                Мы работаем по всей России, в 300+ городов вас ждут вакансии! Смело звоните или пишите нам, а также вступайте в нашу группу в ТГ. Нет времени - заполните короткую анкету - мы сами свяжемся с Вами, когда Вам будет удобно!
+            </p>
+        </div>
+    </div>
+    <div class="hero-video-dimmer"></div>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/static/background.mp4" type="video/mp4">
+    </video>
+</div>
+
+<section class="service-comp first-section">
+    <div class="container">
+        <div class="service-comp-wrap">
+            <div class="vacancy-form">
+                <h2>Скорее и смелее!</h2>
+                <p>Звоните нам c 9:00 до 18:00 по МСК: <br>
+                    &#128222; <a href="tel:+79633240394" class="vacancy-link">+7&nbsp;(963)&nbsp;324-03-94</a><br>
+                    &#128222; <a href="tel:+79052619344" class="vacancy-link">+7&nbsp;(905)&nbsp;261-93-44</a><br>
+                </p>
+                <p>Пишите нам в Телеграм и WhatsApp: <br>
+                    &#9993; <a href="https://wa.me/79633240394" class="vacancy-link">+7&nbsp;(963)&nbsp;324-03-94</a><br>
+                    &#9993; <a href="https://wa.me/79052619344" class="vacancy-link">+7&nbsp;(905)&nbsp;261-93-44</a><br>
+                </p>
+                <p><b>
+                    А также вступайте в нашу группу в ТГ:
+                    <a class="telegram-link" href="https://t.me/+0r3gWhBGDS5lYmFi">
+                        Телеграм
+                    </a>
+                </b></p>
+                <p>Там вы найдете еще больше актуальных вакансий!</p>
+                <p id="vacancy-form-button-text">Нет времени - заполните короткую анкету - мы сами свяжемся с Вами, когда Вам будет удобно!<br/></p>
+            </div>
+            <div class="service-comp-img" id="service-comp-img-merch"></div>
+        </div>
+    </div>
+</section>
+
+
+<section class="adv">
+    <div class="container">
+        <h2>Мерчандайзинг</h2>
+        <ul class="adv-list">
+            <li class="adv-el">
+                <h3>
+                    Визитный мерчандайзер <br />
+                    <i>(Москва и МО ,СПб и ЛО)</i>
+                </h3>
+                <div class="adv-txt">
+                    <p class="vacancy-txt"><b>Полная и частичная занятость</b></p>
+                    <p class="vacancy-txt">Требуется визитный мерчандайзер для работы с
+                        продукцией сладкая бакалея
+                    </p>
+                    <p class="vacancy-txt">Магазины: Окей, Перекресток, Детский мир, Спар, Авоська, Верный, Леонардо</p>
+                    <h4>Обязанности:</h4>
+                    <ul class="vacancy-list">
+                        <li>выкладка продукции клиента</li>
+                        <li>ротация по сроками годности</li>
+                        <li>фотоотчет</li>
+                    </ul>
+                    <p class="vacancy-txt">Рассмотрим кандидатов из любой сферы торговли (мерчандайзер, продавец, РТЗ);
+                        также готовы рассмотреть кандидатов без опыта. Всему научим)
+                    </p>
+                </div>
+            </li>
+            <li class="adv-el">
+                <h3>
+                    Мобильный мерчандайзер <br />
+                    <i>(на минимаркеты и супермаркеты)</i>
+                </h3>
+                <div class="adv-txt">
+                    <p class="vacancy-txt"><b>Полная и частичная занятость</b></p>
+
+                    <p class="vacancy-txt">
+                        Визитный мерчандайзер для работы с алкогольной продукцией
+                    </p>
+
+                    <p class="vacancy-txt">
+                        Магазины: Дикси, Пятерочка, Магнит, Перекресток, Верный и пр.
+                    </p>
+
+                    <p class="vacancy-txt">
+                        Большой выбор магазинов по всей России, адресная программа по запросу
+                    </p>
+
+                    <p class="vacancy-txt">
+                        Если вы уже работаете: совмещение возможно!
+                    </p>
+
+                    <h4>Обязанности:</h4>
+                    <ul class="vacancy-list">
+                        <li>обеспечение выкладки продукции клиента</li>
+                        <li>контроль наличия и актуальности ценников</li>
+                        <li>фотоотчет</li>
+                    </ul>
+
+                    <p class="vacancy-txt">
+                        Рассматриваем кандидатов как с опытом, так и без опыта работы. Всему обучим!
+                    </p>
+                </div>
+            </li>
+            <li class="adv-el">
+                <h3>
+                    Мерчандайзер (гипермаркеты)
+                </h3>
+                <div class="adv-txt">
+                    <p class="vacancy-txt">
+                        Стационарный или визитный мерчандайзер для работы с товарами для детского творчества — слаймы, лизуны, реагенты.
+                    </p>
+
+                    <p class="vacancy-txt">
+                        Магазины: Лента ГМ, Ашан, Окей.
+                    </p>
+
+                    <h4>Обязанности:</h4>
+                    <ul class="vacancy-list">
+                        <li>обеспечение выкладки (поддержание корпоративного блока)</li>
+                        <li>контроль наличия и актуальности ценников</li>
+                        <li>предоставление отчетности по итогам визита в программе</li>
+                    </ul>
+
+                    <p class="vacancy-txt">
+                        Рассмотрим кандидатов из любой сферы торговли (мерчандайзер, продавец, РТЗ); также готовы рассмотреть кандидатов без опыта. Всему научим)
+                    </p>
+                </div>
+            </li>
+                        <li class="adv-el">
+                <h3>
+                    Мобильный мерчандайзер <br />
+                    <i>(Москва и МО)</i>
+                </h3>
+                <div class="adv-txt">
+                    <p class="vacancy-txt"><b>Полная и частичная занятость</b></p>
+
+                    <p class="vacancy-txt">
+                        Магазины: Перекресток, Пятерочка, Лента
+                    </p>
+
+                    <p class="vacancy-txt">
+                        Рассмотрим кандидатов из любой сферы торговли (мерчандайзер, продавец, РТЗ); также готовы рассмотреть кандидатов без опыта. Всему обучим)
+                    </p>
+
+                    <h4>Обязанности:</h4>
+                    <ul class="vacancy-list">
+                        <li>обеспечение выкладки продукции клиента</li>
+                        <li>контроль наличия и актуальности ценников</li>
+                        <li>фотоотчет</li>
+                    </ul>
+                </div>
+            </li>
+
+                        <li class="adv-el">
+                <h3>
+                    Визитный мерчандайзер <br />
+                    <i>(Санкт-Петербург)</i>
+                </h3>
+                <div class="adv-txt">
+                    <p class="vacancy-txt"><b>Полная и частичная занятость</b></p>
+
+                    <p class="vacancy-txt">
+                        Визитный мерчандайзер для работы с продукцией — крабовые палочки
+                    </p>
+
+                    <p class="vacancy-txt">
+                        Магазины: Перекресток, Окей
+                    </p>
+
+                    <p class="vacancy-txt">
+                        Район подберём ближе к дому
+                    </p>
+
+                    <p class="vacancy-txt">
+                        Рассматриваем кандидатов как с опытом, так и без опыта работы. Всему обучим!
+                    </p>
+
+                    <h4>Обязанности:</h4>
+                    <ul class="vacancy-list">
+                        <li>выкладка продукции клиента</li>
+                        <li>ротация по срокам годности</li>
+                        <li>фотоотчет</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="adv-el">
+                <h3>
+                    Визитный мерчандайзер <br />
+                    <i>(Москва и МО — М.Видео и Эльдорадо)</i>
+                </h3>
+                <div class="adv-txt">
+                    <p class="vacancy-txt"><b>Полная и частичная занятость</b></p>
+
+                    <p class="vacancy-txt">
+                        Визитный мерчандайзер на продукцию — Термосы
+                    </p>
+
+                    <p class="vacancy-txt">
+                        Магазины: М.Видео, Эльдорадо
+                    </p>
+
+                    <h4>Обязанности:</h4>
+                    <ul class="vacancy-list">
+                        <li>выкладка продукции клиента</li>
+                        <li>фотоотчет</li>
+                    </ul>
+
+                    <p class="vacancy-txt">
+                        Рассмотрим кандидатов из любой сферы торговли (мерчандайзер, продавец, РТЗ); также готовы рассмотреть кандидатов без опыта. Всему обучим)
+                    </p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</section>
+
+
+<section class="service-comp">
+    <div class="container">
+        <h2>Почему Вам стоит выбрать именно нас</h2>
+        <div class="service-comp-wrap">
+            <div class="service-comp-img" id="service-comp-img-audit"></div>
+            <ul class="service-comp-list">
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Работаем по всей России</h4>
+                    <div class="service-comp-txt">У нас более 350 городов на обслуживании. Точно найдется Ваш.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Обслуживаем все торговые сети</h4>
+                    <div class="service-comp-txt">Создайте Ваш идеальный маршрут! Мы присутствуем во всех федеральных и большинстве локальных торговых сетей в РФ.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Удобный график работы</h4>
+                    <div class="service-comp-txt">Только Вы выбираете - сколько дней в неделю хотите работать и в какие часы.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Нет задержек по заработном плате</h4>
+                    <div class="service-comp-txt">Все четко и в срок!</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Дополнительные бонусы и премии</h4>
+                    <div class="service-comp-txt">Поощряем отличную работу.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Карьера</h4>
+                    <div class="service-comp-txt">Лучшие сотрудники быстро получают возможность профессионального развития и более высокие должности.</div>
+                </li>
+                <li class="service-comp-el">
+                    <h4 class="service-comp-title">Мы ценим каждого человека</h4>
+                    <div class="service-comp-txt">Создаём условия для личностного и профессионального роста. Помогаем Вам развиваться в выбранном направлении.</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+{% include 'main/_feedback_form.html' %}
+
+{% endblock %}
