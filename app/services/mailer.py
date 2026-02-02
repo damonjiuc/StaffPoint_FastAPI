@@ -38,7 +38,7 @@ async def send_email(
     try:
         await smtp.connect()
         await smtp.sendmail(
-            "f.kerov@staffpoint.ru",
+            "noreply@damon-dev.ru",
             [to_email],
             msg.as_string()
         )

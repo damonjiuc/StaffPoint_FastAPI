@@ -1,0 +1,52 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/news.css') }}">
+{% endblock %}
+
+{% block meta %}
+    <script type="application/ld+json">
+    {{ jsonld | safe }}
+    </script>
+
+
+    <meta name="robots" content="noindex, nofollow">
+    <title>Новости - Staff Point</title>
+    <meta name="description" content="Политика конфиденциальности агентства мерчандайзинга Staff Point. Узнайте, как мы собираем, используем и защищаем ваши данные.">
+{% endblock %}
+
+{% block content %}
+    <aside class="article-aside">
+        <h2>Читайте также</h2>
+        <ul>
+            {% for news in news_items %}
+                <li class="article-aside-article">
+                    <p class="article-aside-title"><a href="/news/{{ news.slug }}/">{{ news.title }}</a></p>
+                    <p class="article-aside-meta">{{ news.published_at.strftime('%d.%m.%Y') }} | {{ news.section.title }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </aside>
+    <div class="article-main">
+        <div class="article-container">
+            <article class="news-article">
+                <div class="article-top">
+                    <div class="article-top-el">
+                        <div class="article-title-block">
+                            <hr class="title-line" />
+                            <h1 class="article-title">
+                                {{ news_item.title }}
+                            </h1>
+                        </div>
+                        <p class="meta">{{ news_item.published_at.strftime('%d.%m.%Y') }} | {{ news_item.section.title }}</p>
+                    </div>
+                    {% if news_item.image %}
+                        <img src="{{ news_item.image }}" alt="{{ news_item.title }}">
+                    {% endif %}
+                </div>
+                <div class="content">{{ news_item.content|safe }}</div>
+            </article>
+        </div>
+    </div>
+
+{% endblock %}

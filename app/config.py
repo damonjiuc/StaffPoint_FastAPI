@@ -66,6 +66,7 @@ class Settings(BaseSettings):
     TEMPLATES_DIR: Path = BASE_DIR / 'app' / 'templates'
     STATIC_URL: str = '/static'
     STATIC_DIR: Path = BASE_DIR / 'app' / 'static'
+    UPLOAD_DIR: Path = BASE_DIR / 'app' / 'static' / 'uploads'
 
     def mount_static(self, app):
         if self.STATIC_DIR.exists():

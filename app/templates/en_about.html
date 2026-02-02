@@ -1,0 +1,202 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block meta %}
+    {% include 'jsonld/about.html' %}
+    <meta name="description" lang="ru" content="Агентство мерчандайзинга Staff Point! ✔Услуги мерчандайзинга {{ region.insert if region}}! ✔Услуги аутстаффинга {{ region.insert if region}}! ➤➤У нас Вы можете заказать мерчандайзинг, аутстаффинг персонала, тайного покупателя {{ region.insert if region}}! ➤20+ лет на рынке! 350+ города на обслуживании!" />
+    <meta name="keywords" content="Агентство мерчандайзинга {{ region.insert if region}}, Услуги мерчандайзинга {{ region.insert if region}}, улуги выкладки товаров {{ region.insert if region}}, услуги аутсорсинга {{ region.insert if region}}, технический мерчандайзинг {{ region.insert if region}}, размещение POSM {{ region.insert if region}}" />
+    <title>About - Staff Point</title>
+{% endblock %}
+
+{% block content %}
+<section class="full-screen">
+    <div class="fs-left">
+        <div class="number-el">
+            <div class="number-title">20+</div>
+            <div class="number-subtitle">years</div>
+        </div>
+        <div class="number-el">
+            <div class="number-title">350+</div>
+            <div class="number-subtitle">cities</div>
+        </div>
+        <div class="number-el">
+            <div class="number-title">30 000+</div>
+            <div class="number-subtitle">points of sale</div>
+        </div>
+    </div>
+    <div class="fs-right">
+        <div class="fs-txt">
+            <hr class="title-line" />
+            <h1 class="fs-title">
+                About us
+            </h1>
+            <p>
+                Having worked in the advertising services market for many years, we faced quite various challenges in dealing with network retail outlets every day. We managed to overcome all these difficulties while remaining responsible and delivering high-quality performance.
+            </p>
+            <p>We have devoted a lot of time to building strong relationship with the staff, even in the most remote and small retail outlets all across world.</p>
+            <p>
+                By being present daily on all federal and regional networks, we closely monitor any changes in the market. This allows us to respond promptly to the happenings, as well as, to follow new trends.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section class="full-screen vertical-margin">
+	<div class="fs-block">
+        <img src="/static/imgs/about-mission.jpg" alt="Агентство мерчандайзинга Staff Point, миссия, фон">
+        <div class="fs-title-padding">
+            <hr class="title-line" />
+            <h2 class="fs-title">Our mission</h2>
+        </div>
+    </div>
+	<div class="fs-block">
+        <ul class="fs-list">
+            <li class="fs-list-el">
+                To provide services of the highest quality even in the most remote parts of the world.
+            </li>
+            <li class="fs-list-el">
+                To demonstrate total transparency in all business operations.
+                Our clients know exactly what work they are paying for and can check it everything thoroughly.
+            </li>
+            <li class="fs-list-el">
+                To provide services accessible to business of any size - whether it is a small enterprise or a large manufacturer.
+            </li>
+            <li class="fs-list-el">
+                To bear full social responsibility towards all our employees by providing them with the guarantees of timely and
+                fair remuneration.
+            </li>
+        </ul>
+	</div>
+</section>
+
+
+<section class="full-screen vertical-margin">
+	<div class="fs-block-l">
+        <div class="fs-padding">
+            <hr class="title-line" />
+            <h2 class="fs-title">Our working areas</h2>
+        </div>
+        <div class="four-txt-pic-txt">
+            <p>
+                We provide comprehensive solutions in merchandising and outsourcing. We ensure effective product presentation
+                at the retail locations , uphold brand standards and thus increase sales.<br />&nbsp;
+            </p>
+            <p>
+                We take on the recruitment, training and management of the personnel, as well as, a work quality control and
+                analysis of the results, so to make the decisions not only visible but also measurable.
+            </p>
+        </div>
+        <div class="four-txt-pic-txt-flex">
+            <div class="four-txt-pic-txt-el">
+                <div class="four-txt-pic-txt-el-title">Merchandising FMCG, Beauty, DIY</div>
+                <div class="four-txt-pic-txt-el-txt">
+                    We totally understand the difference between sales channels, our approach is tailored to each product category.
+                    Our tasks are carried out entirely by our full-time staff, not a single agency on contract.
+                </div>
+            </div>
+            <div class="four-txt-pic-txt-el">
+                <div class="four-txt-pic-txt-el-title">Staff outsourcing</div>
+                <div class="four-txt-pic-txt-el-txt">
+                    For 20 years we have been building successful field teams, reducing costs for our clients and helping them to
+                    forget permanently about  staff turnover. We ensure complete cleanliness and transparency in relationships.
+                </div>
+            </div>
+            <div class="four-txt-pic-txt-el">
+                <div class="four-txt-pic-txt-el-title">Retail audit and monitoring</div>
+                <div class="four-txt-pic-txt-el-txt">
+                    We provide accurate information on product shelf status and depict a real picture of your business.
+                    We identify growth areas and provide specific recommendations for changing the situation.
+                </div>
+            </div>
+            <div class="four-txt-pic-txt-el">
+                <div class="four-txt-pic-txt-el-title">Technical merchandising</div>
+                <div class="four-txt-pic-txt-el-txt">
+                    We will make your product stand out among the competitors in the most effective way. We take care of everything
+                    to ourselves, from delivery to assembly process. We‘ll negotiate with the federal chains for the extra
+                    points of sale of your product.
+                </div>
+            </div>
+        </div>
+	</div>
+	<div class="fs-block-s">
+        <img src="/static/imgs/service-comp/audit.jpg" alt="Агентство мерчандайзинга Staff Point, направления работы, фон">
+    </div>
+</section>
+
+
+<section class="full-screen vertical-margin">
+	<div class="fs-block">
+        <img src="/static/imgs/about-unic.jpg" alt="Агентство мерчандайзинга Staff Point, уникальность, фон">
+        <div class="fs-title-padding">
+            <hr class="title-line" />
+            <h2 class="fs-title">Our unicity</h2>
+        </div>
+    </div>
+	<div class="fs-block">
+        <ul class="fs-list">
+            <li class="fs-list-el">
+                Free for you innovative online platform for staff managing with geolocation of all the stores.
+            </li>
+            <li class="fs-list-el">
+               We understand the big difference between FMCG, Beauty and DIY channels. They are different directions , different staff and personalized approaches the product categories.
+            </li>
+            <li class="fs-list-el">
+                We work exclusively with our own field teams in all the cities across Russia - no delays in response, no quality loss and no bureaucracy.
+            </li>
+            <li class="fs-list-el">
+                All our merchandisers undergo a product training , work according to the KPI system, have over 2 year experience in retail and are employed in accordance with Russian legislation.
+            </li>
+            <li class="fs-list-el">
+                We‘ll help you to forget about constant personnel turnover, staff shortages, problems with the recruitment and selection, empty retail outlets and sales failures.
+            </li>
+        </ul>
+	</div>
+</section>
+
+<section class="grid-nets medium-bg">
+    <div class="container">
+        <hr class="title-line" />
+        <h1 class="fs-title">
+            Our partners
+        </h1>
+        <div class="grid-nets-wrap">
+            <div class="grid-nets-el"><img src="/static/partners_logos/frutonyaya.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/gal-min.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/iceberry.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/ladoga.jpg" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/logo-bunge.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/logo-ge.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/logo-hochland.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/logo-hortica.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/logo-pepsi.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/logo-sletat.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/logo-valio.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/logo-vbd.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/logo-x5.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/catrice.svg" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/Dairy-Culture.jpg" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/fabrik.webp" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/fosforel.svg" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/gurmina.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/hlebprom.svg" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/kudryaviy_metod.webp" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/sladskaz.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/smartbar.jpg" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/yablokov.svg" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/zeitun.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <!--<div class="grid-nets-el"><img src="/static/partners_logos/zubareva.webp" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>
+            <div class="grid-nets-el"><img src="/static/partners_logos/vm-logo.png" alt="Лого сети, в которой мы делаем мерчандайзинг - "></div>-->
+        </div>
+    </div>
+</section>
+
+<style>
+    .geo {display:none;}
+</style>
+
+
+{% endblock %}

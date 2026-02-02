@@ -9,8 +9,9 @@
             <li class="menu-item"><a class="menu-item-link" href="{{ url_for_service('#services', region) }}">Услуги</a></li>
 	        <li class="menu-item"><a class="menu-item-link" href="{{ url_for_service('vacancies', region) }}">Вакансии</a></li>
             <li class="menu-item"><a class="menu-item-link" href="{{ url_for_service('about', region) }}">О нас</a></li>
-            <!--<li class="menu-item"><a class="menu-item-link" href="#">Новости</a></li>-->
+            <li class="menu-item"><a class="menu-item-link" href="{{ url_for_service('news', region) }}">Новости</a></li>
             <li class="menu-item"><a class="menu-item-link" href="{{ url_for_service('contacts', region) }}">Контакты</a></li>
+            <li class="menu-item"><a class="menu-item-link" href="/en">Eng</a></li>
         </ul>
 
         <div class="menu-region dropdown">

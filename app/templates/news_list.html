@@ -1,0 +1,58 @@
+{% extends 'main/base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/news.css') }}">
+{% endblock %}
+
+{% block meta %}
+    <script type="application/ld+json">
+    {{ jsonld | safe }}
+    </script>
+
+    <meta name="robots" content="noindex, nofollow">
+    <title>Новости - Staff Point</title>
+    <meta name="description" content="Политика конфиденциальности агентства мерчандайзинга Staff Point. Узнайте, как мы собираем, используем и защищаем ваши данные.">
+{% endblock %}
+
+{% block content %}
+    <aside class="news-aside">
+        <h3>Разделы</h3>
+        <ul>
+          {% for sec in sections %}
+            <li><a href="?section={{ sec.slug }}"{% if current_section == sec.slug %} class="active"{% endif %}>{{ sec.title }}</a></li>
+          {% endfor %}
+        </ul>
+
+        <h3>Теги</h3>
+        <ul>
+          {% for t in tags %}
+            <li><a href="?tag={{ t.slug }}"{% if current_tag == t.slug %} class="active"{% endif %}>{{ t.title }}</a></li>
+          {% endfor %}
+        </ul>
+    </aside>
+    <div class="news-main">
+        <div class="fs-txt">
+            <hr class="title-line" />
+            <h1 class="fs-title">
+                Новости
+            </h1>
+        </div>
+        <div class="news-list">
+        {% for news in news_items %}
+            <div class="news-card">
+                {% if news.image %}
+                    <a href="/news/{{ news.slug }}/"><img class="news-card-img" src="{{ news.image }}" alt="{{ news.title }}"></a>
+                {% endif %}
+                <div class="news-card-container">
+                    <h2 class="news-card-title"><a href="/news/{{ news.slug }}/">{{ news.title }}</a></h2>
+                    <div class="vertical-flex">
+                        <p class="preview">{{ news.preview_text }}</p>
+                        <p class="meta">{{ news.published_at.strftime('%d.%m.%Y') }} | {{ news.section.title }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

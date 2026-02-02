@@ -11,8 +11,6 @@ services_router = APIRouter(
 )
 
 
-
-
 @services_router.get('/merch/', response_class=HTMLResponse)
 @services_router.get('/{region_slug}/merch/', response_class=HTMLResponse)
 async def merch_page(request: Request, region_slug: str | None = None):
