@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Request, UploadFile, File
+from fastapi import APIRouter, Request, UploadFile, File, Response
 from fastapi.responses import HTMLResponse, RedirectResponse, PlainTextResponse, JSONResponse
 from pathlib import Path
 from sqlalchemy import select, desc
@@ -10,7 +10,7 @@ from app.config import settings
 from app.database.engine import session_maker
 from app.services.regions import url_for_service, get_region, regions
 from app.database.models import NewsSection, Tag, News
-from app.services.jsonld import news_list_schema, news_detail_schema, dump_jsonld
+from app.services.news import news_list_schema, news_detail_schema, dump_jsonld, render_news_sitemap
 
 templates = settings.configure_templates()
 
@@ -27,6 +27,39 @@ async def favicon():
 @main_router.get('/sitemap.xml')
 async def sitemap():
     return RedirectResponse(url='/static/sitemap.xml')
+
+
+@main_router.get('/sitemap-static.xml')
+async def sitemap():
+    return RedirectResponse(url='/static/sitemap-static.xml')
+
+
+@main_router.get("/sitemap-news.xml")
+async def sitemap_news():
+    async with session_maker() as session:
+        result = await session.execute(
+            select(News).where(News.is_published == True)
+        )
+        news_items = result.scalars().all()
+
+    base_url = settings.BASE_URL
+
+    urls = [
+        {
+            "loc": f"{base_url}/news/{news.slug}/",
+            "lastmod": (
+                news.updated.isoformat() or news.published_at.date().isoformat()
+            ),
+        }
+        for news in news_items
+    ]
+
+    xml = await render_news_sitemap(urls)
+
+    return Response(
+        content=xml,
+        media_type="application/xml"
+    )
 
 
 @main_router.get("/robots.txt", response_class=PlainTextResponse)
@@ -89,7 +122,8 @@ async def news_list(request: Request, section: str | None = None, tag: str | Non
         query = select(News).options(
             selectinload(News.section),
             selectinload(News.tags)
-        ).where(News.is_published == True)
+        ).where(News.is_published == True
+        ).order_by(desc(News.published_at))
 
         if section:
             query = query.join(News.section).where(NewsSection.slug == section)

@@ -55,6 +55,8 @@ class Settings(BaseSettings):
 
     debug: bool = True
 
+    BASE_URL: str = "https://staffpoint.ru"
+
     # SMTP настройки
     SMTP_HOST: str
     SMTP_PORT: int = 25

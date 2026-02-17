@@ -78,7 +78,6 @@ section:last-child {
 }
 
 .top-menu {
-    z-index: 1;
     background-color: var(--dark);
     width: 100%;
     height: 60px;
@@ -212,7 +211,8 @@ section:last-child {
     }
 
     .menu-item {
-        margin: 5px auto;
+        margin: auto;
+        padding: 8px;
         text-align: center;
     }
 

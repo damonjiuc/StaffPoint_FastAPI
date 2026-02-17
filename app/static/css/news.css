@@ -323,4 +323,8 @@ article .content img {
         flex-wrap: wrap;
         justify-content: space-around;
     }
+
+    .news-aside ul a {
+        padding: 0 8px;
+    }
 }

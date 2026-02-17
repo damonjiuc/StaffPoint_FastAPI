@@ -3,9 +3,10 @@ import json
 from datetime import datetime
 from typing import Iterable
 
+from app.config import settings
 from app.database.models import News
 
-BASE_URL = "https://staffpoint.ru"
+BASE_URL = settings.BASE_URL
 
 
 def dump_jsonld(data: dict) -> str:
@@ -122,3 +123,19 @@ def news_detail_schema(news: News) -> dict:
             },
         ],
     }
+
+
+async def render_news_sitemap(urls: list[dict]) -> str:
+    xml = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+    ]
+
+    for url in urls:
+        xml.append("  <url>")
+        xml.append(f"    <loc>{url['loc']}</loc>")
+        xml.append(f"    <lastmod>{url['lastmod']}</lastmod>")
+        xml.append("  </url>")
+
+    xml.append("</urlset>")
+    return "\n".join(xml)
